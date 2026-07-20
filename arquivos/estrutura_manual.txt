@@ -1,0 +1,44 @@
+/manual-repasys
+├── index.html
+├── style.css
+├── /assets
+│   └── (imagens exportadas, ex: filtrolojista.png)
+└── /manuais
+    ├── /atendimentos
+    │   ├── index.md
+    │   ├── crm.md
+    │   ├── fluxo-loja.md
+    │   ├── agenda.md
+    │   ├── cadastros.md
+    │   └── relatorios.md
+    ├── /operacao
+    │   ├── index.md
+    │   ├── operacoes.md
+    │   ├── assinatura-digital.md
+    │   ├── template-contrato.md
+    │   ├── pendencias.md
+    │   ├── cadastros.md
+    │   └── relatorios.md
+    ├── /financeiro
+    │   ├── index.md
+    │   ├── titulo.md
+    │   ├── notas-fiscais.md
+    │   ├── recorrencias.md
+    │   ├── movimento-conta.md
+    │   ├── conciliacao-bancaria.md
+    │   ├── cadastros.md
+    │   └── relatorios.md
+    └── /parametros
+        ├── index.md
+        ├── consultar.md
+        ├── empresas.md
+        ├── lojistas.md
+        ├── usuarios.md
+        ├── perfis.md
+        ├── permissoes.md
+        ├── extrato-creditos.md
+        ├── integracao-whatsapp.md
+        ├── cobrancas.md
+        ├── consulta-veicular.md
+        ├── cidades-ibge.md
+        └── auditoria.md
