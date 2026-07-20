@@ -1,6 +1,6 @@
 # 🎓 Central de Ajuda - Repasys
 
-[![Status](https://img.shields.io/badge/Status-Concluído-success)](#)
+[![Status](https://img.shields.io/badge/Status-Em_andamento-yellow)](#)
 [![Tecnologia](https://img.shields.io/badge/Tech-Vanilla_JS-f7df1e)](#)
 
 > Uma Single Page Application (SPA) leve e escalável para documentação de sistemas, construída sem a necessidade de frameworks pesados ou banco de dados.
