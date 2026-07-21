@@ -304,6 +304,16 @@
       
       container.innerHTML = html;
     }
+    function toggleSubMenu(elementoCabecalho) {
+      // 1. Gira a setinha (adicionando/removendo a classe 'active')
+      elementoCabecalho.classList.toggle('active');
+      
+      // 2. Encontra a lista (ul) que está logo abaixo deste cabeçalho
+      const subMenu = elementoCabecalho.nextElementSibling;
+      
+      // 3. Mostra ou esconde a lista (adicionando/removendo a classe 'open')
+      subMenu.classList.toggle('open');
+    }
   </script>
 </body>
 </html>
