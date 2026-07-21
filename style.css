@@ -608,3 +608,67 @@
   color: #718096;
   font-size: 1.2em;
 }
+/* =========================================
+   ESTILOS DO MENU LATERAL EXPANSÍVEL
+   ========================================= */
+
+.nav-module {
+  margin-bottom: 5px;
+}
+
+.nav-module-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #2d3748;
+  border-radius: 8px;
+  transition: background-color 0.2s ease;
+}
+
+.nav-module-header:hover {
+  background-color: #f1f5f9; /* Fundo cinza clarinho ao passar o mouse */
+}
+
+/* A setinha que indica se está aberto ou fechado */
+.toggle-icon {
+  font-size: 0.7em;
+  color: #718096;
+  transition: transform 0.3s ease; /* Animação suave de giro */
+}
+
+/* Quando a gaveta estiver aberta, giramos a seta para cima */
+.nav-module-header.active .toggle-icon {
+  transform: rotate(180deg);
+}
+
+/* Esconde as sublistas por padrão */
+.sub-nav-list {
+  display: none; 
+  padding-left: 30px;
+  list-style: none;
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+
+/* Mostra a lista quando adicionamos a classe open via JavaScript */
+.sub-nav-list.open {
+  display: block;
+}
+
+/* Deixa os links internos um pouco menores para dar hierarquia */
+.sub-nav-list .nav-link {
+  display: block;
+  padding: 8px 0;
+  text-decoration: none;
+  color: #4a5568;
+  font-size: 0.95em;
+  transition: color 0.2s;
+}
+
+.sub-nav-list .nav-link:hover {
+  color: #3182ce;
+  font-weight: 600;
+}

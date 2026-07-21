@@ -19,16 +19,22 @@
           <span>Central de Ajuda Repasys</span>
         </div>
       </div>
-
+      
       <p class="nav-title">Menu</p>
       <nav>
-        <ul class="nav-list">
-          <li><a class="nav-link" href="#" onclick="voltarParaHome()">🏠 Página inicial</a></li>
+        <ul class="nav-list" style="list-style: none; padding: 0;">
+          <li style="margin-bottom: 10px;">
+            <a class="nav-link" href="#" onclick="voltarParaHome()" style="display: block; padding: 10px; text-decoration: none; color: #2d3748; font-weight: bold;">🏠 Página inicial</a>
+          </li>
           
           <!-- Módulo: Atendimentos -->
-          <li>
-            <a class="nav-link" href="#" onclick="carregarManual('atendimentos/index')">👥 Atendimentos</a>
-            <ul class="sub-nav-list" style="padding-left: 20px; font-size: 0.9em; list-style: none;">
+          <li class="nav-module">
+            <div class="nav-module-header" onclick="toggleSubMenu(this)">
+              <span>👥 Atendimentos</span>
+              <span class="toggle-icon">▼</span>
+            </div>
+            <ul class="sub-nav-list">
+              <li><a class="nav-link" href="#" onclick="carregarManual('atendimentos/index')">Visão Geral</a></li>
               <li><a class="nav-link" href="#" onclick="carregarManual('atendimentos/crm')">CRM & Negociação</a></li>
               <li><a class="nav-link" href="#" onclick="carregarManual('atendimentos/fluxo-loja')">Fluxo de Loja</a></li>
               <li><a class="nav-link" href="#" onclick="carregarManual('atendimentos/agenda')">Agenda</a></li>
@@ -38,9 +44,13 @@
           </li>
 
           <!-- Módulo: Operações -->
-          <li>
-            <a class="nav-link" href="#" onclick="carregarManual('operacao/index')">⚙️ Operação</a>
-            <ul class="sub-nav-list" style="padding-left: 20px; font-size: 0.9em; list-style: none;">
+          <li class="nav-module">
+            <div class="nav-module-header" onclick="toggleSubMenu(this)">
+              <span>⚙️ Operação</span>
+              <span class="toggle-icon">▼</span>
+            </div>
+            <ul class="sub-nav-list">
+              <li><a class="nav-link" href="#" onclick="carregarManual('operacao/index')">Visão Geral</a></li>
               <li><a class="nav-link" href="#" onclick="carregarManual('operacao/operacoes')">Operações</a></li>
               <li><a class="nav-link" href="#" onclick="carregarManual('operacao/assinatura-digital')">Assinatura Digital</a></li>
               <li><a class="nav-link" href="#" onclick="carregarManual('operacao/template-contrato')">Template de contrato</a></li>
@@ -51,9 +61,13 @@
           </li>
 
           <!-- Módulo: Financeiro -->
-          <li>
-            <a class="nav-link" href="#" onclick="carregarManual('financeiro/index')">💰 Financeiro</a>
-            <ul class="sub-nav-list" style="padding-left: 20px; font-size: 0.9em; list-style: none;">
+          <li class="nav-module">
+            <div class="nav-module-header" onclick="toggleSubMenu(this)">
+              <span>💰 Financeiro</span>
+              <span class="toggle-icon">▼</span>
+            </div>
+            <ul class="sub-nav-list">
+              <li><a class="nav-link" href="#" onclick="carregarManual('financeiro/index')">Visão Geral</a></li>
               <li><a class="nav-link" href="#" onclick="carregarManual('financeiro/titulo')">Título</a></li>
               <li><a class="nav-link" href="#" onclick="carregarManual('financeiro/notas-fiscais')">Notas Fiscais (NFS-e)</a></li>
               <li><a class="nav-link" href="#" onclick="carregarManual('financeiro/recorrencias')">Recorrências</a></li>
@@ -65,9 +79,13 @@
           </li>
 
           <!-- Módulo: Parâmetros -->
-          <li>
-            <a class="nav-link" href="#" onclick="carregarManual('parametros/index')">🛠️ Parâmetros</a>
-            <ul class="sub-nav-list" style="padding-left: 20px; font-size: 0.9em; list-style: none;">
+          <li class="nav-module">
+            <div class="nav-module-header" onclick="toggleSubMenu(this)">
+              <span>🛠️ Parâmetros</span>
+              <span class="toggle-icon">▼</span>
+            </div>
+            <ul class="sub-nav-list">
+              <li><a class="nav-link" href="#" onclick="carregarManual('parametros/index')">Visão Geral</a></li>
               <li><a class="nav-link" href="#" onclick="carregarManual('parametros/consultar')">Consultar</a></li>
               <li><a class="nav-link" href="#" onclick="carregarManual('parametros/empresas')">Empresas</a></li>
               <li><a class="nav-link" href="#" onclick="carregarManual('parametros/usuarios')">Usuários</a></li>
