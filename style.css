@@ -672,3 +672,50 @@
   color: #3182ce;
   font-weight: 600;
 }
+/* =========================================
+   CARD DE SUPORTE (WhatsApp)
+   ========================================= */
+
+.support-card {
+  margin-top: 30px; /* Dá um espaço da lista de artigos acima */
+  padding: 20px;
+  background: #ebf8ff; /* Fundo azul bem clarinho para combinar com a marca */
+  border-radius: 12px;
+  border: 1px solid #bee3f8;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Espaço entre título, texto e botão */
+}
+
+.support-card h4 {
+  color: #2b6cb0;
+  font-size: 1.05em;
+  margin: 0;
+}
+
+.support-card p {
+  color: #4a5568;
+  font-size: 0.9em;
+  margin: 0 0 5px 0;
+  line-height: 1.4;
+}
+
+.whatsapp-btn {
+  display: inline-block;
+  background-color: #25D366; /* Verde oficial do WhatsApp */
+  color: #ffffff;
+  text-decoration: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.95em;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 4px 6px rgba(37, 211, 102, 0.2); /* Sombra suave verde */
+}
+
+.whatsapp-btn:hover {
+  background-color: #128C7E; /* Verde mais escuro no hover */
+  transform: translateY(-2px); /* Efeito de botão sendo "pressionado/elevado" */
+  color: #ffffff;
+}

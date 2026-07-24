@@ -1,4 +1,4 @@
-/manual-repasys
+/manuais
 ├── index.html
 ├── style.css
 ├── /assets
