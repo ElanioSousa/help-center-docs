@@ -15,17 +15,17 @@ last_updated: "2026-07-18"
 
 Escolha uma das funcionalidades abaixo para ver o passo a passo detalhado:
 
-* **[CRM & Negociação](crm.md)**
+* <a href="#" onclick="carregarManual('atendimentos/crm')"><b>CRM & Negociação</b></a>
 Descubra como criar um novo atendimento, gerenciar sua carteira de clientes e avançar suas negociações no funil de vendas.
 
-* **[Fluxo de Loja](fluxo-loja.md)**
+* <a href="#" onclick="carregarManual('atendimentos/fluxo-loja')"><b>Fluxo de Loja</b></a>
 Veja como gerenciar a fila de clientes físicos, registrar horários de chegada e distribuir os atendimentos entre os vendedores.
 
-* **[Agenda](agenda.md)**
+* <a href="#" onclick="carregarManual('atendimentos/agenda')"><b>Agenda</b></a>
 Aprenda a registrar compromissos, agendar retornos, visitas e organizar a rotina diária da sua equipe comercial.
 
-* **[Cadastros](cadastros.md)**
+* <a href="#" onclick="carregarManual('atendimentos/cadastros')"><b>Cadastros</b></a>
 Orientações sobre como cadastrar novos clientes, leads, veículos de interesse e gerenciar sua base de contatos do CRM.
 
-* **[Relatórios](relatorios.md)**
+* <a href="#" onclick="carregarManual('atendimentos/relatorios')"><b>Relatórios</b></a>
 Entenda como extrair métricas de conversão, motivos de perda de negócios, produtividade da equipe e desempenho geral do atendimento.
