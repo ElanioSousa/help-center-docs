@@ -1,9 +1,9 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  
   <!-- Biblioteca para traduzir Markdown para HTML -->
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <title>Central de Ajuda - Repasys</title>
@@ -24,31 +24,15 @@
         <span style="font-weight: 900; color: #007bff; font-size: 1.4em; letter-spacing: 1px;">REPASYS</span>
       </div>
     </div>
-    
-    <nav class="navbar-center">
-      <ul class="top-nav-list">
-        <li onclick="carregarManual('atendimentos/index')">👥 Atendimentos <span class="arrow-down">v</span></li>
-        <li onclick="carregarManual('operacao/index')">📄 Operação <span class="arrow-down">v</span></li>
-        <li onclick="carregarManual('financeiro/index')">💰 Financeiro <span class="arrow-down">v</span></li>
-        <li onclick="carregarManual('parametros/index')">⚙️ Parametros <span class="arrow-down">v</span></li>
-      </ul>
-    </nav>
-
-    <div class="navbar-right">
-       <div class="user-greeting">
-          <span class="avatar">👤</span>
-          <div class="greeting-text">
-             <strong>Boa tarde, Elanio.</strong>
-             <small>Empresa de Teste</small>
-          </div>
-       </div>
-    </div>
   </header>
 
   <div class="app-shell">
     <aside class="sidebar card" aria-label="Menu lateral">
       <div class="brand">
-        <div class="brand-icon">🎓</div>
+        <div class="brand-icon">
+          <!-- Novo ícone da FontAwesome -->
+          <i class="fa-solid fa-book-open-reader"></i>
+        </div>
         <div>
           <h1>Manuais</h1>
           <span>Central de Ajuda Repasys</span>
@@ -59,13 +43,13 @@
       <nav>
         <ul class="nav-list" style="list-style: none; padding: 0;">
           <li style="margin-bottom: 10px;">
-            <a class="nav-link" href="#" onclick="voltarParaHome()" style="display: block; padding: 10px; text-decoration: none; color: #2d3748; font-weight: bold;">🏠 Página inicial</a>
+            <a class="nav-link" href="#" onclick="voltarParaHome()" style="display: block; padding: 10px; text-decoration: none; color: #2d3748; font-weight: bold;"><i class="fa-solid fa-house-chimney"></i> Página inicial</a>
           </li>
           
           <!-- Módulo: Atendimentos -->
           <li class="nav-module">
             <div class="nav-module-header" onclick="toggleSubMenu(this)">
-              <span>👥 Atendimentos</span>
+              <span><i class="fa-solid fa-users"></i> Atendimentos</span>
               <span class="toggle-icon">▼</span>
             </div>
             <ul class="sub-nav-list">
@@ -81,7 +65,7 @@
           <!-- Módulo: Operações -->
           <li class="nav-module">
             <div class="nav-module-header" onclick="toggleSubMenu(this)">
-              <span>⚙️ Operação</span>
+              <span><i class="fa-solid fa-gear"></i></i> Operação</span>
               <span class="toggle-icon">▼</span>
             </div>
             <ul class="sub-nav-list">
@@ -98,7 +82,7 @@
           <!-- Módulo: Financeiro -->
           <li class="nav-module">
             <div class="nav-module-header" onclick="toggleSubMenu(this)">
-              <span>💰 Financeiro</span>
+              <span><i class="fa-solid fa-sack-dollar"></i></i> Financeiro</span>
               <span class="toggle-icon">▼</span>
             </div>
             <ul class="sub-nav-list">
@@ -116,7 +100,7 @@
           <!-- Módulo: Parâmetros -->
           <li class="nav-module">
             <div class="nav-module-header" onclick="toggleSubMenu(this)">
-              <span>🛠️ Parâmetros</span>
+              <span><i class="fa-solid fa-sliders"></i></i> Parâmetros</span>
               <span class="toggle-icon">▼</span>
             </div>
             <ul class="sub-nav-list">
