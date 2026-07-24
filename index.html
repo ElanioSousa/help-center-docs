@@ -6,10 +6,45 @@
   <link rel="stylesheet" href="style.css">
   <!-- Biblioteca para traduzir Markdown para HTML -->
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-  <title>Central de Ajuda</title>
+  <title>Central de Ajuda - Repasys</title>
 </head>
 <body>
   
+  <!-- BARRA DE NAVEGAÇÃO SUPERIOR -->
+  <header class="top-navbar">
+    <div class="navbar-left">
+      <button class="menu-toggle" aria-label="Menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+      <div class="logo">
+        <span style="font-weight: 900; color: #007bff; font-size: 1.4em; letter-spacing: 1px;">REPASYS</span>
+      </div>
+    </div>
+    
+    <nav class="navbar-center">
+      <ul class="top-nav-list">
+        <li onclick="carregarManual('atendimentos/index')">👥 Atendimentos <span class="arrow-down">v</span></li>
+        <li onclick="carregarManual('operacao/index')">📄 Operação <span class="arrow-down">v</span></li>
+        <li onclick="carregarManual('financeiro/index')">💰 Financeiro <span class="arrow-down">v</span></li>
+        <li onclick="carregarManual('parametros/index')">⚙️ Parametros <span class="arrow-down">v</span></li>
+      </ul>
+    </nav>
+
+    <div class="navbar-right">
+       <div class="user-greeting">
+          <span class="avatar">👤</span>
+          <div class="greeting-text">
+             <strong>Boa tarde, Elanio.</strong>
+             <small>Empresa de Teste</small>
+          </div>
+       </div>
+    </div>
+  </header>
+
   <div class="app-shell">
     <aside class="sidebar card" aria-label="Menu lateral">
       <div class="brand">
@@ -97,18 +132,19 @@
       </nav>
     </aside>
 
-    <main class="main-content" id="inicio">
+<main class="main-content" id="inicio">
       
-      <!-- Painel Inicial (Dashboard) -->
-      <div id="dashboard-home">
-        <section class="hero">
-          <h2>Encontre tutoriais e manuais para usar nosso sistema.</h2>
-            <form class="search-box" onsubmit="realizarBusca(event)">
-              <input type="search" id="campo-busca" placeholder="Busque por leads, operações, relatórios..." />
-              <button type="submit">🔎</button>
-            </form>
-        </section>
+      <!-- 1. ÁREA DE BUSCA GLOBAL (Agora está fora do dashboard, sempre visível!) -->
+      <section class="hero" style="margin-bottom: 24px;">
+        <h2>Encontre tutoriais e manuais para usar nosso sistema.</h2>
+          <form class="search-box" onsubmit="realizarBusca(event)">
+            <input type="search" id="campo-busca" placeholder="Busque por leads, operações, relatórios..." />
+            <button type="submit">🔎</button>
+          </form>
+      </section>
 
+      <!-- 2. Painel Inicial (Dashboard) -->
+      <div id="dashboard-home">
         <section class="section">
           <div class="category-grid">
             <article class="category-card" onclick="carregarManual('atendimentos/index')" style="cursor: pointer;">
@@ -131,8 +167,8 @@
         </section>
       </div>
 
-      <!-- Vitrine do Manual (Onde o .md será carregado) -->
-      <div id="conteudo-markdown" class="card" style="display: none; margin-top: 20px; padding: 40px; background: #ffffff; border-radius: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); min-height: 400px;">
+      <!-- 3. Vitrine do Manual (Onde o .md será carregado) -->
+      <div id="conteudo-markdown" class="card" style="display: none; padding: 40px; background: #ffffff; border-radius: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); min-height: 400px;">
           <!-- O conteúdo do .md entra aqui -->
       </div>
 
@@ -173,10 +209,11 @@
           <span>📄 Como fazer conciliação bancária?</span>
           <span class="arrow">→</span>
         </div>
-          <div class="support-card"> 
+          
+        <!-- NOVO: Card de Suporte via WhatsApp -->
+        <div class="support-card"> 
           <h4>🤔 Não achou o que precisava?</h4>
           <p>Fale diretamente com um de nossos especialistas.</p>
-          <!-- O link 'wa.me' abre diretamente o WhatsApp (no celular ou Web) -->
           <a href="https://wa.me/5543988303076?text=Olá,%20preciso%20de%20ajuda%20com%20o%20sistema%20Repasys." target="_blank" class="whatsapp-btn">
           💬 Contacte um atendente
         </a>
@@ -185,9 +222,10 @@
     </aside>
   </div>
 
+  <!-- SCRIPTS -->
   <script>
+    // Função para renderizar os Manuais em MD
     function carregarManual(nomeArquivo) {
-      // Agora o nomeArquivo inclui a pasta, ex: "atendimentos/crm"
       const caminhoDoArquivo = `./manuais/${nomeArquivo}.md`;
 
       document.getElementById('conteudo-markdown').innerHTML = '<p>Carregando documentação...</p>';
@@ -201,16 +239,12 @@
             return resposta.text();
         })
         .then(textoMarkdown => {
-            // Remove metadados (Frontmatter) se existirem
             let conteudoPuro = textoMarkdown;
             if (textoMarkdown.startsWith('---')) {
                 const partes = textoMarkdown.split('---');
                 conteudoPuro = partes.slice(2).join('---'); 
             }
-            // Traduz Markdown para HTML e exibe na vitrine
             document.getElementById('conteudo-markdown').innerHTML = marked.parse(conteudoPuro);
-            
-            // Força a rolagem para o topo da página após carregar o texto
             window.scrollTo({ top: 0, behavior: 'smooth' });
         })
         .catch(erro => {
@@ -218,15 +252,25 @@
         });
     }
 
+    // Função do Menu Lateral Expansível
+    function toggleSubMenu(elementoCabecalho) {
+      elementoCabecalho.classList.toggle('active');
+      const subMenu = elementoCabecalho.nextElementSibling;
+      subMenu.classList.toggle('open');
+    }
+
+    // Função para voltar à tela inicial
     function voltarParaHome() {
       document.getElementById('conteudo-markdown').style.display = 'none';
       document.getElementById('dashboard-home').style.display = 'block';
+      
+      // Limpa a barra de pesquisa para uma nova busca
+      document.getElementById('campo-busca').value = ''; 
     }
+
     /* =========================================
        SISTEMA DE BUSCA INTERNA
        ========================================= */
-
-    // 1. O nosso "Banco de Dados" de palavras-chave
     const indiceDeBusca = [
       { 
         titulo: "Como cadastrar um Novo Atendimento (Lead)", 
@@ -253,35 +297,29 @@
         caminho: "operacao/operacoes", 
         palavras_chave: ["operação", "contrato", "venda", "novo contrato", "assinatura"] 
       }
-      // A equipe de desenvolvimento pode adicionar mais manuais aqui com o tempo!
     ];
 
-    // 2. A função que processa o que o usuário digitou
     function realizarBusca(event) {
-      event.preventDefault(); // Evita que a página recarregue ao dar "Enter"
+      event.preventDefault(); 
       const termoDigitado = document.getElementById('campo-busca').value.toLowerCase().trim();
       
-      if (!termoDigitado) return; // Se não digitou nada, não faz nada
+      if (!termoDigitado) return; 
 
-      // Filtra o índice procurando o termo no título ou nas palavras-chave
       const resultados = indiceDeBusca.filter(item => {
          const tituloCombina = item.titulo.toLowerCase().includes(termoDigitado);
          const palavraChaveCombina = item.palavras_chave.some(palavra => palavra.toLowerCase().includes(termoDigitado));
-         
          return tituloCombina || palavraChaveCombina;
       });
 
       mostrarResultadosDaBusca(resultados, termoDigitado);
     }
 
-    // 3. A função que desenha os resultados na tela
     function mostrarResultadosDaBusca(resultados, termoBusca) {
       document.getElementById('dashboard-home').style.display = 'none';
       const container = document.getElementById('conteudo-markdown');
       container.style.display = 'block';
       window.scrollTo({ top: 0, behavior: 'smooth' });
 
-      // Se não achou nada
       if (resultados.length === 0) {
          container.innerHTML = `
             <h2>Nenhum resultado encontrado para "${termoBusca}" 😕</h2>
@@ -291,7 +329,6 @@
          return;
       }
 
-      // Se achou, monta a lista de opções
       let html = `<h2>🔎 Resultados da busca para "${termoBusca}":</h2>`;
       html += `<ul style="list-style: none; padding: 0; margin-top: 20px; display: flex; flex-direction: column; gap: 15px;">`;
       
@@ -311,16 +348,6 @@
       html += `<button onclick="voltarParaHome()" style="margin-top: 30px; padding: 10px 20px; cursor: pointer; border: 1px solid #cbd5e0; background: #fff; border-radius: 6px;">Voltar ao Início</button>`;
       
       container.innerHTML = html;
-    }
-    function toggleSubMenu(elementoCabecalho) {
-      // 1. Gira a setinha (adicionando/removendo a classe 'active')
-      elementoCabecalho.classList.toggle('active');
-      
-      // 2. Encontra a lista (ul) que está logo abaixo deste cabeçalho
-      const subMenu = elementoCabecalho.nextElementSibling;
-      
-      // 3. Mostra ou esconde a lista (adicionando/removendo a classe 'open')
-      subMenu.classList.toggle('open');
     }
   </script>
 </body>

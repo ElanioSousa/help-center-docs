@@ -1,617 +1,214 @@
-    :root {
-      --bg: #f6f8fb;
-      --surface: #ffffff;
-      --surface-soft: #f0f5ff;
-      --primary: #3157ff;
-      --primary-dark: #1733a6;
-      --accent: #00b894;
-      --text: #172033;
-      --muted: #64748b;
-      --border: #e5eaf3;
-      --warning: #fff5dc;
-      --warning-text: #7a4c00;
-      --shadow: 0 18px 45px rgba(23, 32, 51, 0.08);
-      --radius-lg: 24px;
-      --radius-md: 16px;
-      --radius-sm: 12px;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      min-height: 100vh;
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      color: var(--text);
-      background:
-        radial-gradient(circle at top left, rgba(49, 87, 255, 0.13), transparent 34%),
-        radial-gradient(circle at 80% 0%, rgba(0, 184, 148, 0.11), transparent 30%),
-        var(--bg);
-      line-height: 1.5;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    .app-shell {
-      display: grid;
-      grid-template-columns: 280px minmax(0, 1fr) 340px;
-      gap: 24px;
-      max-width: 1520px;
-      margin: 0 auto;
-      padding: 24px;
-    }
-
-    .sidebar,
-    .right-panel,
-    .main-content {
-      min-width: 0;
-    }
-
-    .card {
-      background: rgba(255,255,255,0.86);
-      border: 1px solid rgba(229, 234, 243, 0.95);
-      border-radius: var(--radius-lg);
-      box-shadow: var(--shadow);
-      backdrop-filter: blur(16px);
-    }
-
-    .sidebar {
-      position: sticky;
-      top: 24px;
-      height: calc(100vh - 48px);
-      padding: 22px;
-      overflow: auto;
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      margin-bottom: 26px;
-    }
-
-    .brand-icon {
-      display: grid;
-      place-items: center;
-      width: 44px;
-      height: 44px;
-      border-radius: 14px;
-      background: linear-gradient(135deg, var(--primary), var(--accent));
-      color: #fff;
-      font-size: 22px;
-      box-shadow: 0 12px 24px rgba(49,87,255,0.22);
-    }
-
-    .brand h1 {
-      font-size: 18px;
-      letter-spacing: -0.03em;
-    }
-
-    .brand span {
-      display: block;
-      color: var(--muted);
-      font-size: 12px;
-      margin-top: 2px;
-    }
-
-    .nav-title {
-      margin: 18px 0 10px;
-      color: var(--muted);
-      font-size: 12px;
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-    }
-
-    .nav-list {
-      display: grid;
-      gap: 7px;
-      list-style: none;
-    }
-
-    .nav-link {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      padding: 11px 12px;
-      border-radius: 13px;
-      color: #334155;
-      font-size: 14px;
-      font-weight: 650;
-      transition: 0.2s ease;
-    }
-
-    .nav-link:hover,
-    .nav-link.active {
-      color: var(--primary-dark);
-      background: var(--surface-soft);
-      transform: translateX(2px);
-    }
-
-    .sidebar-help {
-      margin-top: 22px;
-      padding: 16px;
-      border-radius: var(--radius-md);
-      background: linear-gradient(135deg, #eff6ff, #ecfdf5);
-      border: 1px solid #dbeafe;
-    }
-
-    .sidebar-help strong {
-      display: block;
-      margin-bottom: 8px;
-      font-size: 14px;
-    }
-
-    .sidebar-help p {
-      color: var(--muted);
-      font-size: 13px;
-      margin-bottom: 12px;
-    }
-
-    .button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      min-height: 42px;
-      padding: 0 16px;
-      border-radius: 999px;
-      border: 0;
-      color: #fff;
-      background: var(--primary);
-      font-weight: 800;
-      font-size: 14px;
-      cursor: pointer;
-      transition: 0.2s ease;
-      box-shadow: 0 12px 24px rgba(49, 87, 255, 0.23);
-    }
-
-    .button:hover {
-      transform: translateY(-1px);
-      background: var(--primary-dark);
-    }
-
-    .button.secondary {
-      color: var(--primary-dark);
-      background: #eef2ff;
-      box-shadow: none;
-    }
-
-    .hero {
-      position: relative;
-      overflow: hidden;
-      padding: 38px;
-      border-radius: 32px;
-      color: #fff;
-      background:
-        linear-gradient(135deg, rgba(16, 35, 120, 0.95), rgba(49, 87, 255, 0.92)),
-        linear-gradient(45deg, var(--primary), var(--accent));
-      box-shadow: 0 24px 60px rgba(23, 51, 166, 0.22);
-    }
-
-    .hero::after {
-      content: "";
-      position: absolute;
-      width: 320px;
-      height: 320px;
-      right: -90px;
-      top: -120px;
-      border-radius: 50%;
-      background: rgba(255,255,255,0.13);
-    }
-
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      margin-bottom: 14px;
-      padding: 8px 12px;
-      border-radius: 999px;
-      background: rgba(255,255,255,0.14);
-      font-size: 13px;
-      font-weight: 800;
-    }
-
-    .hero h2 {
-      max-width: 760px;
-      font-size: clamp(32px, 5vw, 32px);
-      line-height: 0.98;
-      letter-spacing: -0.06em;
-      margin-bottom: 16px;
-    }
-
-    .hero p {
-      max-width: 680px;
-      color: rgba(255,255,255,0.82);
-      font-size: 17px;
-      margin-bottom: 24px;
-    }
-
-    .search-box {
-      position: relative;
-      max-width: 760px;
-    }
-
-    .search-box input {
-      width: 100%;
-      height: 60px;
-      padding: 0 56px 0 22px;
-      border: 0;
-      border-radius: 18px;
-      outline: none;
-      font-size: 15px;
-      box-shadow: 0 18px 40px rgba(0,0,0,0.14);
-    }
-
-    .search-box button {
-      position: absolute;
-      right: 8px;
-      top: 8px;
-      width: 44px;
-      height: 44px;
-      border: 0;
-      border-radius: 14px;
-      color: #fff;
-      background: var(--accent);
-      cursor: pointer;
-      font-size: 18px;
-    }
-
-    .section {
-      margin-top: 24px;
-    }
-
-    .section-header {
-      display: flex;
-      align-items: end;
-      justify-content: space-between;
-      gap: 16px;
-      margin: 0 4px 14px;
-    }
-
-    .section-header h3 {
-      font-size: 22px;
-      letter-spacing: -0.04em;
-    }
-
-    .section-header p {
-      margin-top: 3px;
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    .category-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 16px;
-    }
-
-    .category-card {
-      padding: 20px;
-      border-radius: var(--radius-lg);
-      border: 1px solid var(--border);
-      background: var(--surface);
-      transition: 0.2s ease;
-    }
-
-    .category-card:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 18px 34px rgba(23, 32, 51, 0.09);
-      border-color: #c7d2fe;
-    }
-
-    .category-icon {
-      display: grid;
-      place-items: center;
-      width: 46px;
-      height: 46px;
-      margin-bottom: 14px;
-      border-radius: 15px;
-      background: var(--surface-soft);
-      font-size: 23px;
-    }
-
-    .category-card h4 {
-      margin-bottom: 7px;
-      font-size: 16px;
-      letter-spacing: -0.02em;
-    }
-
-    .category-card p {
-      color: var(--muted);
-      font-size: 14px;
-      min-height: 42px;
-    }
-
-    .article-count {
-      display: inline-flex;
-      margin-top: 15px;
-      color: var(--primary);
-      font-size: 13px;
-      font-weight: 850;
-    }
-
-    .training-list {
-      display: grid;
-      gap: 12px;
-    }
-
-    .training-item {
-      display: grid;
-      grid-template-columns: auto 1fr auto;
-      align-items: center;
-      gap: 14px;
-      padding: 16px;
-      border-radius: var(--radius-md);
-      border: 1px solid var(--border);
-      background: var(--surface);
-    }
-
-    .play {
-      display: grid;
-      place-items: center;
-      width: 42px;
-      height: 42px;
-      border-radius: 50%;
-      color: #fff;
-      background: var(--primary);
-      font-size: 15px;
-    }
-
-    .training-item h4 {
-      font-size: 15px;
-      margin-bottom: 3px;
-    }
-
-    .training-item p {
-      color: var(--muted);
-      font-size: 13px;
-    }
-
-    .duration {
-      padding: 7px 10px;
-      border-radius: 999px;
-      color: var(--primary-dark);
-      background: #eef2ff;
-      font-size: 12px;
-      font-weight: 900;
-      white-space: nowrap;
-    }
-
-    .tip {
-      margin-top: 14px;
-      padding: 15px;
-      border-radius: var(--radius-md);
-      color: var(--warning-text);
-      background: var(--warning);
-      font-size: 14px;
-      border: 1px solid #ffe2a8;
-    }
-
-    .right-panel {
-      display: grid;
-      gap: 18px;
-      align-content: start;
-      position: sticky;
-      top: 24px;
-      height: calc(100vh - 48px);
-      overflow: auto;
-    }
-
-    .side-card {
-      padding: 22px;
-    }
-
-    .side-card h3 {
-      margin-bottom: 14px;
-      font-size: 18px;
-      letter-spacing: -0.03em;
-    }
-
-    .popular-list {
-      display: grid;
-      gap: 10px;
-      list-style: none;
-    }
-
-    .popular-list a {
-      display: flex;
-      justify-content: space-between;
-      gap: 10px;
-      padding: 12px;
-      border-radius: 13px;
-      background: #f8fafc;
-      color: #334155;
-      font-size: 14px;
-      font-weight: 700;
-      transition: 0.2s ease;
-    }
-
-    .popular-list a:hover {
-      color: var(--primary-dark);
-      background: #eef2ff;
-    }
-
-    .see-all {
-      display: inline-flex;
-      margin-top: 14px;
-      color: var(--primary);
-      font-size: 14px;
-      font-weight: 900;
-    }
-
-    .release {
-      padding: 16px;
-      border-radius: var(--radius-md);
-      background: linear-gradient(135deg, #eff6ff, #f0fdf4);
-      border: 1px solid #dbeafe;
-    }
-
-    .badge {
-      display: inline-flex;
-      margin-left: 8px;
-      padding: 4px 8px;
-      border-radius: 999px;
-      color: #fff;
-      background: var(--accent);
-      font-size: 11px;
-      font-weight: 900;
-      vertical-align: middle;
-    }
-
-    .release ul {
-      margin: 12px 0 12px 18px;
-      color: #334155;
-      font-size: 14px;
-    }
-
-    .release time {
-      color: var(--muted);
-      font-size: 12px;
-      font-style: italic;
-    }
-
-    .support-card {
-      color: #fff;
-      background: linear-gradient(135deg, #172033, #3157ff);
-      border: 0;
-    }
-
-    .support-card p {
-      margin-bottom: 16px;
-      color: rgba(255,255,255,0.78);
-      font-size: 14px;
-    }
-
-    .support-card .button {
-      background: #fff;
-      color: var(--primary-dark);
-      box-shadow: none;
-    }
-
-    @media (max-width: 1180px) {
-      .app-shell {
-        grid-template-columns: 240px minmax(0, 1fr);
-      }
-
-      .right-panel {
-        grid-column: 2;
-        position: static;
-        height: auto;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-
-      .support-card {
-        grid-column: 1 / -1;
-      }
-    }
-
-    @media (max-width: 860px) {
-      .app-shell {
-        display: block;
-        padding: 14px;
-      }
-
-      .sidebar,
-      .right-panel {
-        position: static;
-        height: auto;
-        margin-bottom: 18px;
-      }
-
-      .hero {
-        padding: 26px;
-      }
-
-      .category-grid,
-      .right-panel {
-        grid-template-columns: 1fr;
-      }
-
-      .training-item {
-        grid-template-columns: auto 1fr;
-      }
-
-      .duration {
-        grid-column: 2;
-        justify-self: start;
-      }
-      /* Container onde o Markdown vai aparecer */
-       #conteudo-markdown {
-        margin-top: 20px;
-        padding: 20px;
-        background: #ffffff;
-        border-radius: 20px;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-        min-height: 400px;
-      }
-}
-      /*=========================================
-          ESTILOS PARA O CONTEÚDO DO MARKDOWN
-        ========================================= */
-       #conteudo-markdown img {
-        max-width: 100%; /* Impede que a imagem vaze do contêiner */
-        height: auto; /* Mantém a proporção correta para não distorcer */
-        border-radius: 8px; /* Deixa as bordas levemente arredondadas */
-        margin: 20px 0; /* Dá um respiro (espaço) em cima e embaixo da imagem */
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra suave */
-        display: block; /* Garante que a imagem fique em uma linha própria */
-      }
-
-      /* =========================================
-   ESTILOS DO PAINEL DIREITO (Artigos Mais Acessados)
+/* =========================================
+   VARIÁVEIS GLOBAIS E RESET
    ========================================= */
-
-.right-panel {
-  background: #ffffff;
-  padding: 24px;
-  border-radius: 20px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-  max-height: calc(100vh - 40px); /* Evita que o painel fique maior que a tela */
-  overflow-y: auto; /* Adiciona rolagem caso tenha muitos itens */
+:root {
+  --bg: #f6f8fb;
+  --surface: #ffffff;
+  --surface-soft: #f0f5ff;
+  --primary: #3157ff;
+  --primary-dark: #1733a6;
+  --accent: #00b894;
+  --text: #172033;
+  --muted: #64748b;
+  --border: #e5eaf3;
+  --warning: #fff5dc;
+  --warning-text: #7a4c00;
+  --shadow: 0 18px 45px rgba(23, 32, 51, 0.08);
+  --radius-lg: 24px;
+  --radius-md: 16px;
+  --radius-sm: 12px;
 }
 
-.article-item {
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(circle at top left, rgba(49, 87, 255, 0.13), transparent 34%),
+    radial-gradient(circle at 80% 0%, rgba(0, 184, 148, 0.11), transparent 30%),
+    var(--bg);
+  line-height: 1.5;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* =========================================
+   BARRA DE NAVEGAÇÃO SUPERIOR (TOP NAVBAR)
+   ========================================= */
+.top-navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #f8f9fa; /* Fundo cinza bem clarinho igual ao print */
-  padding: 16px 20px;
-  border-radius: 12px;
-  margin-bottom: 15px;
+  background-color: #ffffff;
+  height: 70px;
+  padding: 0 30px;
+  border-bottom: 1px solid #e2e8f0;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-left, .navbar-center, .navbar-right {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-left {
+  gap: 20px;
+}
+
+.menu-toggle {
+  background: none;
+  border: none;
   cursor: pointer;
-  transition: all 0.2s ease-in-out;
-  font-weight: 600;
   color: #2d3748;
-  font-size: 0.95em;
+  display: flex;
+  align-items: center;
 }
 
-/* Efeito ao passar o mouse */
-.article-item:hover {
-  background-color: #e2e8f0;
-  transform: translateX(5px); /* Faz o card dar um "pulinho" para a direita */
+.top-nav-list {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
 }
 
-.article-item span {
+.top-nav-list li {
   display: flex;
   align-items: center;
   gap: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  color: #4a5568;
+  font-size: 0.95em;
+  transition: color 0.2s;
 }
 
-.article-item .arrow {
-  color: #718096;
-  font-size: 1.2em;
+.top-nav-list li:hover {
+  color: #3182ce;
 }
+
+.arrow-down {
+  font-size: 0.7em;
+  color: #a0aec0;
+}
+
+.user-greeting {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.user-greeting .avatar {
+  font-size: 1.5em;
+  background: #ebf8ff;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+.greeting-text {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.9em;
+  color: #2d3748;
+}
+
+.greeting-text small {
+  color: #718096;
+  font-size: 0.8em;
+}
+
+/* =========================================
+   ESTRUTURA PRINCIPAL (GRID)
+   ========================================= */
+.app-shell {
+  display: grid;
+  grid-template-columns: 280px minmax(0, 1fr) 340px;
+  gap: 24px;
+  max-width: 1520px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.sidebar,
+.right-panel,
+.main-content {
+  min-width: 0;
+}
+
+.card {
+  background: rgba(255,255,255,0.86);
+  border: 1px solid rgba(229, 234, 243, 0.95);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(16px);
+}
+
+/* =========================================
+   MENU LATERAL ESQUERDO (SIDEBAR)
+   ========================================= */
+.sidebar {
+  position: sticky;
+  top: 90px; /* Ajustado para não bater na navbar superior */
+  height: calc(100vh - 110px);
+  padding: 22px;
+  overflow: auto;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 26px;
+}
+
+.brand-icon {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  color: #fff;
+  font-size: 22px;
+  box-shadow: 0 12px 24px rgba(49,87,255,0.22);
+}
+
+.brand h1 {
+  font-size: 18px;
+  letter-spacing: -0.03em;
+}
+
+.brand span {
+  display: block;
+  color: var(--muted);
+  font-size: 12px;
+  margin-top: 2px;
+}
+
+.nav-title {
+  margin: 18px 0 10px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
 /* =========================================
    ESTILOS DO MENU LATERAL EXPANSÍVEL
    ========================================= */
-
 .nav-module {
   margin-bottom: 5px;
 }
@@ -629,22 +226,19 @@
 }
 
 .nav-module-header:hover {
-  background-color: #f1f5f9; /* Fundo cinza clarinho ao passar o mouse */
+  background-color: #f1f5f9;
 }
 
-/* A setinha que indica se está aberto ou fechado */
 .toggle-icon {
   font-size: 0.7em;
   color: #718096;
-  transition: transform 0.3s ease; /* Animação suave de giro */
+  transition: transform 0.3s ease;
 }
 
-/* Quando a gaveta estiver aberta, giramos a seta para cima */
 .nav-module-header.active .toggle-icon {
   transform: rotate(180deg);
 }
 
-/* Esconde as sublistas por padrão */
 .sub-nav-list {
   display: none; 
   padding-left: 30px;
@@ -653,12 +247,10 @@
   margin-bottom: 15px;
 }
 
-/* Mostra a lista quando adicionamos a classe open via JavaScript */
 .sub-nav-list.open {
   display: block;
 }
 
-/* Deixa os links internos um pouco menores para dar hierarquia */
 .sub-nav-list .nav-link {
   display: block;
   padding: 8px 0;
@@ -672,20 +264,206 @@
   color: #3182ce;
   font-weight: 600;
 }
+
+/* =========================================
+   ÁREA CENTRAL (HERO & BUSCA)
+   ========================================= */
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding: 38px;
+  border-radius: 32px;
+  color: #fff;
+  background:
+    linear-gradient(135deg, rgba(16, 35, 120, 0.95), rgba(49, 87, 255, 0.92)),
+    linear-gradient(45deg, var(--primary), var(--accent));
+  box-shadow: 0 24px 60px rgba(23, 51, 166, 0.22);
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  width: 320px;
+  height: 320px;
+  right: -90px;
+  top: -120px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.13);
+}
+
+.hero h2 {
+  max-width: 760px;
+  font-size: clamp(32px, 5vw, 32px);
+  line-height: 0.98;
+  letter-spacing: -0.06em;
+  margin-bottom: 24px;
+}
+
+.search-box {
+  position: relative;
+  max-width: 760px;
+}
+
+.search-box input {
+  width: 100%;
+  height: 60px;
+  padding: 0 56px 0 22px;
+  border: 0;
+  border-radius: 18px;
+  outline: none;
+  font-size: 15px;
+  box-shadow: 0 18px 40px rgba(0,0,0,0.14);
+}
+
+.search-box button {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  width: 44px;
+  height: 44px;
+  border: 0;
+  border-radius: 14px;
+  color: #fff;
+  background: var(--accent);
+  cursor: pointer;
+  font-size: 18px;
+  z-index: 10; /* Garante que o campo de texto não "engula" o clique */
+  transition: all 0.2s ease-in-out; /* Deixa a animação suave */
+  display: flex; /* Centraliza o ícone perfeitamente */
+  align-items: center;
+  justify-content: center;
+}
+
+/* Efeito ao passar o mouse por cima */
+.search-box button:hover {
+  background: #009b7c; /* Escurece um pouco o botão */
+  transform: scale(1.05); /* Dá uma leve "crescidinha" chamando atenção */
+  box-shadow: 0 4px 10px rgba(0, 184, 148, 0.3); /* Uma sombra esverdeada */
+}
+
+/* Efeito ao clicar (botão sendo pressionado) */
+.search-box button:active {
+  transform: scale(0.95); /* O botão "afunda" igual a um botão físico */
+}
+
+/* =========================================
+   CARDS DE CATEGORIA (Dashboard)
+   ========================================= */
+.section {
+  margin-top: 24px;
+}
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.category-card {
+  padding: 20px;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  background: var(--surface);
+  transition: 0.2s ease;
+}
+
+.category-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 34px rgba(23, 32, 51, 0.09);
+  border-color: #c7d2fe;
+}
+
+.category-card h4 {
+  margin-bottom: 7px;
+  font-size: 16px;
+  letter-spacing: -0.02em;
+}
+
+.category-card p {
+  color: var(--muted);
+  font-size: 14px;
+  min-height: 42px;
+}
+
+/* =========================================
+   ESTILOS PARA O CONTEÚDO DO MARKDOWN
+   ========================================= */
+#conteudo-markdown {
+  margin-top: 20px;
+  padding: 40px;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  min-height: 400px;
+}
+
+#conteudo-markdown img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin: 20px 0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  display: block;
+}
+
+/* =========================================
+   PAINEL DIREITO (Right Panel)
+   ========================================= */
+.right-panel {
+  background: #ffffff;
+  padding: 24px;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 90px;
+  height: calc(100vh - 110px);
+  overflow-y: auto;
+}
+
+.article-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f8f9fa;
+  padding: 16px 20px;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  font-weight: 600;
+  color: #2d3748;
+  font-size: 0.95em;
+}
+
+.article-item:hover {
+  background-color: #e2e8f0;
+  transform: translateX(5px);
+}
+
+.article-item span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.article-item .arrow {
+  color: #718096;
+  font-size: 1.2em;
+}
+
 /* =========================================
    CARD DE SUPORTE (WhatsApp)
    ========================================= */
-
 .support-card {
-  margin-top: 30px; /* Dá um espaço da lista de artigos acima */
+  margin-top: 30px;
   padding: 20px;
-  background: #ebf8ff; /* Fundo azul bem clarinho para combinar com a marca */
+  background: #ebf8ff;
   border-radius: 12px;
   border: 1px solid #bee3f8;
   text-align: center;
   display: flex;
   flex-direction: column;
-  gap: 10px; /* Espaço entre título, texto e botão */
+  gap: 10px;
 }
 
 .support-card h4 {
@@ -703,7 +481,7 @@
 
 .whatsapp-btn {
   display: inline-block;
-  background-color: #25D366; /* Verde oficial do WhatsApp */
+  background-color: #25D366;
   color: #ffffff;
   text-decoration: none;
   padding: 12px 20px;
@@ -711,11 +489,64 @@
   font-weight: 600;
   font-size: 0.95em;
   transition: all 0.2s ease-in-out;
-  box-shadow: 0 4px 6px rgba(37, 211, 102, 0.2); /* Sombra suave verde */
+  box-shadow: 0 4px 6px rgba(37, 211, 102, 0.2);
 }
 
 .whatsapp-btn:hover {
-  background-color: #128C7E; /* Verde mais escuro no hover */
-  transform: translateY(-2px); /* Efeito de botão sendo "pressionado/elevado" */
+  background-color: #128C7E;
+  transform: translateY(-2px);
   color: #ffffff;
+}
+
+/* =========================================
+   RESPONSIVIDADE (Telas menores)
+   ========================================= */
+@media (max-width: 1180px) {
+  .app-shell {
+    grid-template-columns: 240px minmax(0, 1fr);
+  }
+
+  .right-panel {
+    grid-column: 2;
+    position: static;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+  }
+
+  .support-card {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 860px) {
+  .top-navbar {
+    padding: 0 15px;
+  }
+  
+  .top-nav-list {
+    display: none; /* Esconde menu do topo no celular para não quebrar layout */
+  }
+
+  .app-shell {
+    display: block;
+    padding: 14px;
+  }
+
+  .sidebar,
+  .right-panel {
+    position: static;
+    height: auto;
+    margin-bottom: 18px;
+  }
+
+  .hero {
+    padding: 26px;
+  }
+
+  .category-grid,
+  .right-panel {
+    grid-template-columns: 1fr;
+  }
 }
