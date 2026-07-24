@@ -9,6 +9,7 @@ last_updated: "2026-07-18"
 
 O registro de um novo atendimento é a etapa inicial para inserir um cliente no seu funil de vendas do CRM. Preencha os dados com atenção para garantir um histórico completo e preciso da negociação desde o primeiro contato.
 
+
 Abaixo está a interface da tela de cadastro com a explicação detalhada de cada campo correspondente aos números indicados na imagem.
 
 ![Tela Novo Atendimento Numerada](./assets/img.png)
@@ -42,3 +43,8 @@ Abaixo está a interface da tela de cadastro com a explicação detalhada de cad
 
 **Seção: Precificação**
 * **20 - Bloco de Precificação:** Área para análise financeira do veículo envolvido. Exibe o **"Valor FIPE"** de mercado, a **"Média Cliente"** (valor de venda para consumidor final), a **"Média Lojista"** (valor de repasse) e um campo para estipular a **"Previsão Rentabilidade"** da negociação.
+
+
+### 📹 Assista ao tutorial em vídeo:
+
+<iframe width="100%" height="450" src="https://www.youtube.com/embed/myXt-otJkGw" title="Tutorial de Cadastro de Atendimento" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="border-radius: 12px; margin: 20px 0; box-shadow: 0 4px 15px rgba(0,0,0,0.1);"></iframe>

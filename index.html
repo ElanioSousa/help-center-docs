@@ -13,15 +13,8 @@
   <!-- BARRA DE NAVEGAÇÃO SUPERIOR -->
   <header class="top-navbar">
     <div class="navbar-left">
-      <button class="menu-toggle" aria-label="Menu">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <line x1="3" y1="12" x2="21" y2="12"></line>
-          <line x1="3" y1="6" x2="21" y2="6"></line>
-          <line x1="3" y1="18" x2="21" y2="18"></line>
-        </svg>
-      </button>
       <div class="logo">
-        <span style="font-weight: 900; color: #007bff; font-size: 1.4em; letter-spacing: 1px;">REPASYS</span>
+        <img src="assets/logo_repasys.png" alt="logo" style="height: 40px; width: auto;">
       </div>
     </div>
   </header>
@@ -132,19 +125,19 @@
         <section class="section">
           <div class="category-grid">
             <article class="category-card" onclick="carregarManual('atendimentos/index')" style="cursor: pointer;">
-              <h4>👥 Atendimentos</h4>
+              <h4><i class="fa-solid fa-users"></i> Atendimentos</h4>
               <p>Módulo de CRM, Fluxo de Loja e Cadastros.</p>
             </article>
             <article class="category-card" onclick="carregarManual('operacao/index')" style="cursor: pointer;">
-              <h4>⚙️ Operações</h4>
+              <h4><i class="fa-solid fa-cogs"></i> Operações</h4>
               <p>Assinaturas, contratos e pendências.</p>
             </article>
             <article class="category-card" onclick="carregarManual('financeiro/index')" style="cursor: pointer;">
-              <h4>💰 Financeiro</h4>
+              <h4><i class="fa-solid fa-sack-dollar"></i> Financeiro</h4>
               <p>Títulos, notas, conciliação e caixa.</p>
             </article>
             <article class="category-card" onclick="carregarManual('parametros/index')" style="cursor: pointer;">
-              <h4>🛠️ Parâmetros</h4>
+              <h4><i class="fa-solid fa-sliders"></i> Parâmetros</h4>
               <p>Configurações globais e permissões.</p>
             </article>
           </div>
@@ -160,37 +153,37 @@
 
    <aside class="right-panel card">
       <h3 style="display: flex; align-items: center; gap: 10px; margin-bottom: 20px; font-size: 1.2em; color: #1a202c;">
-        📄 Artigos mais acessados
+        <i class="fa-solid fa-newspaper"></i> Artigos mais acessados
       </h3>
       
       <div class="article-list">
         <!-- Link 1: Lead -->
-        <div class="article-item" onclick="carregarManual('atendimentos/cadastros')">
-          <span>📄 Como cadastrar um lead?</span>
+        <div class="article-item" onclick="carregarManual('atendimentos/crm')">
+          <span><i class="fa-solid fa-newspaper"></i> Como cadastrar um lead?</span>
           <span class="arrow">→</span>
         </div>
 
         <!-- Link 2: Negociação -->
         <div class="article-item" onclick="carregarManual('atendimentos/crm')">
-          <span>📄 Como criar uma negociação?</span>
+          <span><i class="fa-solid fa-newspaper"></i> Como criar uma negociação?</span>
           <span class="arrow">→</span>
         </div>
 
         <!-- Link 3: Operação -->
         <div class="article-item" onclick="carregarManual('operacao/operacoes')">
-          <span>📄 Como criar uma operação?</span>
+          <span><i class="fa-solid fa-newspaper"></i> Como criar uma operação?</span>
           <span class="arrow">→</span>
         </div>
 
         <!-- Link 4: Título -->
         <div class="article-item" onclick="carregarManual('financeiro/titulo')">
-          <span>📄 Como lançar um título?</span>
+          <span><i class="fa-solid fa-newspaper"></i> Como lançar um título?</span>
           <span class="arrow">→</span>
         </div>
 
         <!-- Link 5: Conciliação -->
         <div class="article-item" onclick="carregarManual('financeiro/conciliacao-bancaria')">
-          <span>📄 Como fazer conciliação bancária?</span>
+          <span><i class="fa-solid fa-newspaper"></i> Como fazer conciliação bancária?</span>
           <span class="arrow">→</span>
         </div>
           
