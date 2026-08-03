@@ -20,7 +20,6 @@
 - [Como rodar localmente](#-como-rodar-localmente)
 - [Roadmap](#-roadmap)
 - [Contribuindo](#-contribuindo)
-- [Licença](#-licença)
 
 ---
 
@@ -100,9 +99,6 @@ Depois, acesse `http://localhost:8080` no navegador.
 
 Contribuições são bem-vindas! Sinta-se à vontade para abrir uma *issue* ou enviar um *pull request* com sugestões, correções ou novos manuais.
 
-## 📄 Licença
-
-Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
 
 ---
 
