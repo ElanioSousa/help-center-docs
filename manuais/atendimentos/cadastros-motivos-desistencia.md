@@ -2,6 +2,7 @@
 id: "cadastros-motivos-desistencia"
 title: "Cadastros: Motivos de Desistência"
 type: "manual"
+keywords: ["motivo desistencia", "motivos de desistencia", "perda de negociacao", "lead perdido"]
 last_updated: "2026-07-31"
 ---
 

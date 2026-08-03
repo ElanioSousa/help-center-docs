@@ -1,0 +1,214 @@
+[
+  {
+    "titulo": "Bem-vindo à Central de Ajuda",
+    "caminho": "inicio/sobre-a-central",
+    "tipo": "reference",
+    "palavras_chave": [
+      "bem vindo",
+      "sobre a central de ajuda",
+      "indice de manuais",
+      "central de ajuda"
+    ],
+    "resumo": "Bem-vindo à Central de Ajuda 📌 Bem-vindo! Aqui, você encontrará toda a documentação disponível sobre o sistema Repasys. Aproveite este espaço para aprender e esclarecer dúvidas sobre telas, opções e recursos do nosso si"
+  },
+  {
+    "titulo": "Cadastros",
+    "caminho": "atendimentos/cadastros",
+    "tipo": "module-hub",
+    "palavras_chave": [
+      "cadastros",
+      "cadastros auxiliares",
+      "atendimentos"
+    ],
+    "resumo": "Cadastros Esta área reúne os cadastros auxiliares usados pelo módulo de Atendimentos. Clique em um item para abrir o manual correspondente: Etiquetas Motivos de Desistência Origem dos Leads Checklist Opcionais Grupo"
+  },
+  {
+    "titulo": "Cadastros: Checklist",
+    "caminho": "atendimentos/cadastros-checklist",
+    "tipo": "manual",
+    "palavras_chave": [
+      "checklist",
+      "avaliacao do veiculo",
+      "vistoria",
+      "inspecao veicular"
+    ],
+    "resumo": "Checklist Este recurso permite cadastrar o checklist, que é a relação das características físicas do veículo as quais mais tarde serão utilizadas na etapa de avaliação do mesmo. Nesta etapa, é feito o checklist marcando "
+  },
+  {
+    "titulo": "Cadastros: Etiquetas",
+    "caminho": "atendimentos/cadastros-etiquetas",
+    "tipo": "manual",
+    "palavras_chave": [
+      "etiquetas",
+      "tags",
+      "quente",
+      "morno",
+      "frio",
+      "classificar lead"
+    ],
+    "resumo": "Etiquetas Este recurso permite cadastrar etiquetas, que são características que poderão ser atribuídas tanto a um lead quanto a uma negociação, diretamente em seus respectivos painéis. Neste exemplo, temos etiquetas cada"
+  },
+  {
+    "titulo": "Cadastros: Grupo (checklist)",
+    "caminho": "atendimentos/cadastros-grupo",
+    "tipo": "manual",
+    "palavras_chave": [
+      "grupo",
+      "grupo de checklist",
+      "organizar checklist"
+    ],
+    "resumo": "Grupo Este recurso permite cadastrar os grupos do checklists do veículo, que são as características do mesmo. Posteriormente, será utilizado na etapa de avaliação do veículo. Por exemplo, o checklist porta-malas será do "
+  },
+  {
+    "titulo": "Cadastros: Motivos de Desistência",
+    "caminho": "atendimentos/cadastros-motivos-desistencia",
+    "tipo": "manual",
+    "palavras_chave": [
+      "motivo desistencia",
+      "motivos de desistencia",
+      "perda de negociacao",
+      "lead perdido"
+    ],
+    "resumo": "Motivos Desistência Este recurso permite cadastrar os motivos de desistência, motivos pelos os quais o cliente decidiu não evoluir na negociação. Esse motivo posteriormente será utilizado ao trocar a fase de um lead para"
+  },
+  {
+    "titulo": "Cadastros: Opcionais",
+    "caminho": "atendimentos/cadastros-opcionais",
+    "tipo": "manual",
+    "palavras_chave": [
+      "opcionais",
+      "opcionais do veiculo",
+      "airbag",
+      "ar condicionado",
+      "acessorios"
+    ],
+    "resumo": "Opcionais Este recurso permite cadastrar os opcionais, que são as diversas características físicas do veículo. Por exemplo: airbags, vidros elétricos, ar condicionado, piloto automático, etc. Posteriormente estas caracte"
+  },
+  {
+    "titulo": "Cadastros: Origem dos Leads",
+    "caminho": "atendimentos/cadastros-origem-leads",
+    "tipo": "manual",
+    "palavras_chave": [
+      "origem leads",
+      "origem dos leads",
+      "instagram",
+      "site",
+      "panfleto",
+      "de onde veio o cliente"
+    ],
+    "resumo": "Origem Leads Este recurso permite cadastrar as várias vias pelas quais o lead pode chegar, conforme a realidade da sua loja. O cadastro de Origem dos Leads pode ser acessado em: Atendimentos > Cadastros > Origem Leads. C"
+  },
+  {
+    "titulo": "Como cadastrar um Novo Atendimento",
+    "caminho": "atendimentos/crm",
+    "tipo": "manual",
+    "palavras_chave": [
+      "novo atendimento",
+      "cadastrar lead",
+      "novo cliente",
+      "adicionar lead",
+      "crm",
+      "formulario"
+    ],
+    "resumo": "Cadastro de Novo Atendimento O registro de um novo atendimento é a etapa inicial para inserir um cliente no seu funil de vendas do CRM. Preencha os dados com atenção para garantir um histórico completo e preciso da negoc"
+  },
+  {
+    "titulo": "CRM & Negociação (completo)",
+    "caminho": "atendimentos/crm-completo",
+    "tipo": "manual",
+    "palavras_chave": [
+      "crm",
+      "negociacao",
+      "painel crm",
+      "leads",
+      "propostas",
+      "fipe",
+      "conversas",
+      "tarefas",
+      "desempenho",
+      "funil"
+    ],
+    "resumo": "CRM & Negociação (completo) A página inicial da seção de CRM e Negociação exibe três painéis distintos: CRM, Negociação e Desempenho: Para buscar CRMs ou Negociações com uma busca mais refinada utilize a opção “Filtro”, "
+  },
+  {
+    "titulo": "Módulo: Atendimentos",
+    "caminho": "atendimentos/index",
+    "tipo": "module-hub",
+    "palavras_chave": [
+      "atendimentos",
+      "menu atendimentos",
+      "visao geral",
+      "crm",
+      "negociacao",
+      "leads"
+    ],
+    "resumo": "Atendimentos 📌 Sobre este Módulo O módulo de Atendimentos é a porta de entrada do Repasys. É aqui que sua equipe vai registrar o primeiro contato com o cliente, organizar o fluxo de visitas na loja física e conduzir as "
+  },
+  {
+    "titulo": "Módulo: Atendimentos (referência antiga)",
+    "caminho": "atendimentos/index-notion-ref",
+    "tipo": "module-hub",
+    "palavras_chave": [
+      "atendimentos",
+      "menu atendimentos",
+      "referencia antiga"
+    ],
+    "resumo": "Módulo: Atendimentos (referência antiga) ℹ️ Objetivo: O menu Atendimentos desempenha um papel fundamental como ponto de partida para o primeiro contato com o cliente, bem como para a subsequente transição para a fase de "
+  },
+  {
+    "titulo": "Módulo: Financeiro",
+    "caminho": "financeiro/index",
+    "tipo": "module-hub",
+    "palavras_chave": [
+      "financeiro",
+      "menu financeiro",
+      "contas a pagar",
+      "contas a receber",
+      "titulos",
+      "extrato bancario",
+      "fornecedores"
+    ],
+    "resumo": "Módulo: Financeiro 💡 Objetivo: O menu Financeiro permite a gestão completa de contas a pagar e receber, com cadastro e controle de títulos provisionados ou já movimentados. Também oferece um extrato detalhado das contas"
+  },
+  {
+    "titulo": "Módulo: Operação",
+    "caminho": "operacao/index",
+    "tipo": "module-hub",
+    "palavras_chave": [
+      "operacao",
+      "menu operacao",
+      "operacoes",
+      "contratos",
+      "pendencias"
+    ],
+    "resumo": "Módulo: Operação ℹ️ Objetivo: A função primordial do menu Operação é viabilizar o gerenciamento e validação das transações de compra e venda de veículos, uma vez que a proposta correspondente foi previamente aceita por m"
+  },
+  {
+    "titulo": "Módulo: Parâmetros",
+    "caminho": "parametros/index",
+    "tipo": "module-hub",
+    "palavras_chave": [
+      "parametros",
+      "menu parametros",
+      "configuracoes",
+      "empresas",
+      "usuarios",
+      "lojistas",
+      "whatsapp"
+    ],
+    "resumo": "Módulo: Parâmetros 💡 Objetivo: O menu Parâmetros permite a personalização, configuração e adaptação do sistema às necessidades específicas de seus usuários ou do ambiente onde será utilizado. Eles funcionam como \"ajuste"
+  },
+  {
+    "titulo": "Página Inicial do Sistema",
+    "caminho": "inicio/pagina-inicial",
+    "tipo": "reference",
+    "palavras_chave": [
+      "pagina inicial",
+      "dashboard",
+      "tela inicial",
+      "navegacao",
+      "barra lateral"
+    ],
+    "resumo": "Página Inicial do Sistema Página inicial: Ao efetuar login no Repasys, o usuário será direcionado automaticamente para nossa página inicial. Esta página lhe permitirá acessar todas as opções do sistema forma aberta, como"
+  }
+]

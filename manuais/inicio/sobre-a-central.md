@@ -2,6 +2,7 @@
 id: "inicio-sobre-a-central"
 title: "Bem-vindo à Central de Ajuda"
 type: "reference"
+keywords: ["bem vindo", "sobre a central de ajuda", "indice de manuais", "central de ajuda"]
 last_updated: "2026-07-31"
 ---
 
@@ -12,8 +13,8 @@ last_updated: "2026-07-31"
 > Abaixo, apresentamos a lista de manuais ordenados pela ordem de aparição no sistema. Basta clicar para ser direcionado ao manual. Qualquer dúvida, entre em contato conosco.
 > Estamos à disposição para ajudar!
 
-- **[Página Inicial](#)** — ver manual `inicio/pagina-inicial`
-- **[Menu - Atendimentos](#)** — ver manual `atendimentos/index-notion-ref`
-- **[Menu Operação](#)** — ver manual `operacao/index`
-- **[Menu - Financeiro](#)** — ver manual `financeiro/index`
-- **[Menu Parâmetros](#)** — ver manual `parametros/index`
+- <a href="#" onclick="carregarManual('inicio/pagina-inicial')"><strong>Página Inicial</strong></a>
+- <a href="#" onclick="carregarManual('atendimentos/index-notion-ref')"><strong>Menu - Atendimentos</strong></a>
+- <a href="#" onclick="carregarManual('operacao/index')"><strong>Menu Operação</strong></a>
+- <a href="#" onclick="carregarManual('financeiro/index')"><strong>Menu - Financeiro</strong></a>
+- <a href="#" onclick="carregarManual('parametros/index')"><strong>Menu Parâmetros</strong></a>

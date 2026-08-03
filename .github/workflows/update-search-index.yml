@@ -1,0 +1,38 @@
+name: Atualizar índice de busca
+
+# Roda automaticamente sempre que um manual é adicionado, removido ou
+# alterado, e comita o assets/search-index.json atualizado de volta no
+# repositório. Assim, adicionar um manual novo nunca mais exige editar
+# JS na mão — só criar o arquivo .md na pasta certa.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "manuais/**"
+      - "scripts/generate-search-index.js"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  gerar-indice:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Gerar assets/search-index.json
+        run: node scripts/generate-search-index.js
+
+      - name: Comitar alterações (se houver)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add assets/search-index.json
+          git diff --cached --quiet || git commit -m "chore: atualiza índice de busca automaticamente"
+          git push

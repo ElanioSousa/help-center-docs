@@ -2,6 +2,7 @@
 id: "financeiro-index"
 title: "Módulo: Financeiro"
 type: "module-hub"
+keywords: ["financeiro", "menu financeiro", "contas a pagar", "contas a receber", "titulos", "extrato bancario", "fornecedores"]
 last_updated: "2026-07-31"
 ---
 

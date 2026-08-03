@@ -2,6 +2,7 @@
 id: "cadastros-origem-leads"
 title: "Cadastros: Origem dos Leads"
 type: "manual"
+keywords: ["origem leads", "origem dos leads", "instagram", "site", "panfleto", "de onde veio o cliente"]
 last_updated: "2026-07-31"
 ---
 

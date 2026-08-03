@@ -61,7 +61,21 @@
               <li><a class="nav-link" href="#" onclick="carregarManual('atendimentos/crm')">CRM & Negociação</a></li>
               <li><a class="nav-link" href="#" onclick="carregarManual('atendimentos/fluxo-loja')">Fluxo de Loja</a></li>
               <li><a class="nav-link" href="#" onclick="carregarManual('atendimentos/agenda')">Agenda</a></li>
-              <li><a class="nav-link" href="#" onclick="carregarManual('atendimentos/cadastros')">Cadastros</a></li>
+              <li class="nav-module">
+                <div class="nav-module-header" onclick="toggleSubMenu(this)">
+                  <span>Cadastros</span>
+                  <span class="toggle-icon"><i class="fa-solid fa-circle-chevron-down"></i></span>
+                </div>
+                <ul class="sub-nav-list">
+                  <li><a class="nav-link" href="#" onclick="carregarManual('atendimentos/cadastros')">Visão Geral</a></li>
+                  <li><a class="nav-link" href="#" onclick="carregarManual('atendimentos/cadastros-etiquetas')">Etiquetas</a></li>
+                  <li><a class="nav-link" href="#" onclick="carregarManual('atendimentos/cadastros-motivos-desistencia')">Motivos de Desistência</a></li>
+                  <li><a class="nav-link" href="#" onclick="carregarManual('atendimentos/cadastros-origem-leads')">Origem dos Leads</a></li>
+                  <li><a class="nav-link" href="#" onclick="carregarManual('atendimentos/cadastros-checklist')">Checklist</a></li>
+                  <li><a class="nav-link" href="#" onclick="carregarManual('atendimentos/cadastros-opcionais')">Opcionais</a></li>
+                  <li><a class="nav-link" href="#" onclick="carregarManual('atendimentos/cadastros-grupo')">Grupo</a></li>
+                </ul>
+              </li>
               <li><a class="nav-link" href="#" onclick="carregarManual('atendimentos/relatorios')">Relatórios</a></li>
             </ul>
           </li>
@@ -258,46 +272,77 @@
 
     /* =========================================
        SISTEMA DE BUSCA INTERNA
-       ========================================= */
-    const indiceDeBusca = [
-      { 
-        titulo: "Como cadastrar um Novo Atendimento (Lead)", 
-        caminho: "atendimentos/crm", 
-        palavras_chave: ["lead", "cadastro", "novo cliente", "adicionar", "atendimento", "crm"] 
-      },
-      { 
-        titulo: "Fluxo de Loja e Fila", 
-        caminho: "atendimentos/fluxo-loja", 
-        palavras_chave: ["fluxo", "loja", "fila", "presencial", "visita"] 
-      },
-      { 
-        titulo: "Lançamento de Títulos e Boletos", 
-        caminho: "financeiro/titulo", 
-        palavras_chave: ["título", "pagar", "receber", "financeiro", "conta", "boleto"] 
-      },
-      { 
-        titulo: "Conciliação Bancária e OFX", 
-        caminho: "financeiro/conciliacao-bancaria", 
-        palavras_chave: ["conciliação", "banco", "extrato", "ofx"] 
-      },
-      { 
-        titulo: "Como criar uma Operação / Contrato", 
-        caminho: "operacao/operacoes", 
-        palavras_chave: ["operação", "contrato", "venda", "novo contrato", "assinatura"] 
+       ========================================= 
+       O índice (assets/search-index.json) é gerado automaticamente a
+       partir do front-matter de todos os manuais — rode
+       "node scripts/generate-search-index.js" sempre que adicionar,
+       remover ou renomear um manual. Assim a busca nunca fica
+       desatualizada em relação ao conteúdo real do site.
+    */
+    let indiceDeBusca = [];
+    let indiceCarregando = null;
+
+    function carregarIndiceDeBusca() {
+      if (!indiceCarregando) {
+        indiceCarregando = fetch('./assets/search-index.json')
+          .then(resp => {
+            if (!resp.ok) throw new Error('Não foi possível carregar o índice de busca');
+            return resp.json();
+          })
+          .then(dados => { indiceDeBusca = dados; })
+          .catch(erro => {
+            console.error('Erro ao carregar índice de busca:', erro);
+            indiceDeBusca = [];
+          });
       }
-    ];
+      return indiceCarregando;
+    }
+    // já dispara o carregamento assim que a página abre, sem esperar o usuário digitar
+    carregarIndiceDeBusca();
 
-    function realizarBusca(event) {
-      event.preventDefault(); 
-      const termoDigitado = document.getElementById('campo-busca').value.toLowerCase().trim();
-      
-      if (!termoDigitado) return; 
+    function normalizarTexto(texto) {
+      return (texto || '')
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '') // remove acentos
+        .toLowerCase()
+        .trim();
+    }
 
-      const resultados = indiceDeBusca.filter(item => {
-         const tituloCombina = item.titulo.toLowerCase().includes(termoDigitado);
-         const palavraChaveCombina = item.palavras_chave.some(palavra => palavra.toLowerCase().includes(termoDigitado));
-         return tituloCombina || palavraChaveCombina;
-      });
+    function pontuarItem(item, palavrasBusca) {
+      const tituloNorm = normalizarTexto(item.titulo);
+      const resumoNorm = normalizarTexto(item.resumo);
+      const keywordsNorm = (item.palavras_chave || []).map(normalizarTexto);
+
+      let pontuacao = 0;
+      for (const palavra of palavrasBusca) {
+        if (!palavra) continue;
+        if (tituloNorm === palavra) pontuacao += 6;
+        else if (tituloNorm.includes(palavra)) pontuacao += 3;
+
+        if (keywordsNorm.some(k => k === palavra)) pontuacao += 3;
+        else if (keywordsNorm.some(k => k.includes(palavra))) pontuacao += 2;
+
+        if (resumoNorm.includes(palavra)) pontuacao += 1;
+      }
+      return pontuacao;
+    }
+
+    async function realizarBusca(event) {
+      event.preventDefault();
+      const termoDigitado = document.getElementById('campo-busca').value.trim();
+      if (!termoDigitado) return;
+
+      await carregarIndiceDeBusca();
+
+      const termoNormalizado = normalizarTexto(termoDigitado);
+      const palavrasBusca = termoNormalizado.split(/\s+/).filter(Boolean);
+
+      const resultados = indiceDeBusca
+        .map(item => ({ item, pontuacao: pontuarItem(item, palavrasBusca) }))
+        .filter(r => r.pontuacao > 0)
+        .sort((a, b) => b.pontuacao - a.pontuacao)
+        .slice(0, 10)
+        .map(r => r.item);
 
       mostrarResultadosDaBusca(resultados, termoDigitado);
     }
@@ -311,7 +356,7 @@
       if (resultados.length === 0) {
          container.innerHTML = `
             <h2>Nenhum resultado encontrado para "${termoBusca}" 😕</h2>
-            <p style="color: #718096; margin-top: 10px;">Tente buscar por termos mais genéricos, como "lead", "título" ou "operação".</p>
+            <p style="color: #718096; margin-top: 10px;">Tente buscar por termos mais genéricos, como "lead", "checklist" ou "financeiro".</p>
             <button onclick="voltarParaHome()" style="margin-top: 20px; padding: 10px 20px; cursor: pointer; border: 1px solid #cbd5e0; background: #fff; border-radius: 6px;">Voltar ao Início</button>
          `;
          return;
@@ -327,7 +372,7 @@
                 onmouseover="this.style.borderColor='#3182ce'"
                 onmouseout="this.style.borderColor='#e2e8f0'">
                <strong style="color: #2b6cb0; font-size: 1.2em; display: block; margin-bottom: 5px;">📄 ${res.titulo}</strong>
-               <span style="color: #718096; font-size: 0.9em;">Clique para abrir este manual na tela...</span>
+               <span style="color: #718096; font-size: 0.9em;">${res.resumo ? res.resumo.slice(0, 140) + '…' : 'Clique para abrir este manual.'}</span>
             </li>
          `;
       });

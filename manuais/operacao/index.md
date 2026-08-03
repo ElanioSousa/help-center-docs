@@ -2,6 +2,7 @@
 id: "operacao-index"
 title: "Módulo: Operação"
 type: "module-hub"
+keywords: ["operacao", "menu operacao", "operacoes", "contratos", "pendencias"]
 last_updated: "2026-07-31"
 ---
 

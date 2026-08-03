@@ -2,6 +2,7 @@
 id: "cadastros-grupo"
 title: "Cadastros: Grupo (checklist)"
 type: "manual"
+keywords: ["grupo", "grupo de checklist", "organizar checklist"]
 last_updated: "2026-07-31"
 ---
 

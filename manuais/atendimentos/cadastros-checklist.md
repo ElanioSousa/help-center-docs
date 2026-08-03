@@ -2,6 +2,7 @@
 id: "cadastros-checklist"
 title: "Cadastros: Checklist"
 type: "manual"
+keywords: ["checklist", "avaliacao do veiculo", "vistoria", "inspecao veicular"]
 last_updated: "2026-07-31"
 ---
 
@@ -26,7 +27,7 @@ Utilize o botão Criar para efetuar um novo cadastro de Checklist:
 - **Ativo:** Indique se este checklist está ativo ou inativo, por padrão, já virá checado como Ativo `(campo obrigatório).`
 - **Grupo:** Selecione a qual grupo pertence este checklist. Esta opção permite agrupar os checklists na etapa de avaliação do veículo, permitindo uma melhor visualização e organização.
 
-> 💡 O cadastro de **Grupos** é personalizável no sistema. Saiba como e onde cadastrá-los **AQUI** (ver manual `atendimentos/cadastros-grupo`)
+> 💡 O cadastro de **Grupos** é personalizável no sistema. Saiba como e onde cadastrá-los <a href="#" onclick="carregarManual('atendimentos/cadastros-grupo')"><strong>AQUI</strong></a>
 
 Clique em “Salvar e continuar” para salvar o cadastro feito e permanecer na página, para inserir um outro checklist: 
 

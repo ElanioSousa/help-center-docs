@@ -2,55 +2,58 @@
 id: "cadastros-etiquetas"
 title: "Cadastros: Etiquetas"
 type: "manual"
+keywords: ["etiquetas", "tags", "quente", "morno", "frio", "classificar lead"]
 last_updated: "2026-07-31"
 ---
 
-# Cadastro de Etiquetas
+# Etiquetas
 
-Este recurso permite criar e gerenciar etiquetas, que são características visuais que podem ser atribuídas tanto a um lead quanto a uma negociação diretamente em seus respectivos painéis[cite: 3]. Você pode utilizá-las para classificar a temperatura de um contato (ex: *Quente, Morno, Frio*), indicando a proximidade de um fechamento bem-sucedido, ou cadastrar categorias personalizadas conforme a necessidade da sua operação[cite: 3].
+Este recurso permite cadastrar etiquetas, que são características que poderão ser atribuídas tanto a um lead quanto a uma negociação, diretamente em seus respectivos painéis. Neste exemplo, temos etiquetas cadastradas como quente, morno e frio, indicando que o lead está perto ou longe de se tornar bem-sucedido, porém, você poderá cadastrar conforme desejar.
 
-**Onde acessar:** `Atendimentos > Cadastros > Etiquetas`[cite: 3]
+O cadastro de Etiquetas pode ser acessado em: Atendimentos > Cadastros > Etiquetas:
 
-![Caminho para Etiquetas](./assets/caminhoetiquetas.png)
+![caminhoetiquetas.png](./assets/caminhoetiquetas.png)
 
----
+**Criando uma Etiquetas:**
 
-### Como Criar uma Nova Etiqueta
+Utilize o botão Criar para efetuar um novo cadastro de etiqueta:
 
-Para registrar uma nova etiqueta no sistema, utilize o botão **"Criar"**[cite: 3].
+![criar.png](./assets/criar.png)
 
-![Botão Criar](./assets/criar.png)
-![Tela de Criação de Etiqueta](./assets/criaretiqueta.png)
+![criaretiqueta.png](./assets/criaretiqueta.png)
 
-**Detalhamento dos Campos**
+- **Nome:** Insira o nome da etiqueta `(campo obrigatório).`
+- **Cor:** Indique uma cor para a sua etiqueta, podendo escolher entre as disponíveis na imagem.
+- **Ativo:** Indique se esta origem está ativa ou inativa, por padrão, já virá checado como Ativa `(campo obrigatório).`
 
-* **Nome (\*):** Insira o título da etiqueta[cite: 3]. *(Campo obrigatório)*.
-* **Cor:** Indique uma cor de destaque para a sua etiqueta, escolhendo entre as opções disponíveis na paleta[cite: 3].
-* **Ativo (\*):** Define se a etiqueta estará disponível para uso[cite: 3]. Por padrão, a caixa de seleção já virá checada como Ativa[cite: 3]. *(Campo obrigatório)*.
+Clique em “Salvar e continuar” para salvar o cadastro feito e permanecer na página, para inserir 
 
-**Ações de Salvamento**
+![salvarEcontinuar.png](./assets/salvarEcontinuar.png)
 
-* **Salvar e continuar:** Salva o cadastro feito e mantém o usuário na página atual, permitindo inserir uma nova etiqueta imediatamente[cite: 3].
-![Botão Salvar e Continuar](./assets/salvarEcontinuar.png)
+Clique em “Salvar” para salvar o cadastro feito e finalizar o processo, o que o levará de volta à página inicial do cadastro de origem.
 
-* **Salvar:** Salva o cadastro e finaliza o processo, redirecionando de volta à página inicial de listagem[cite: 3].
-![Botão Salvar](./assets/salvar.png)
+![salvar.png](./assets/salvar.png)
 
 ---
 
-### Consulta e Gerenciamento
+Na tela inicial podemos buscar as etiquetas filtrando-as por Ativa ou Inativa, bem como pelo nome dos mesmos através da caixa Buscar. Clique em “Consultar” para obter o resultado da pesquisa:
 
-Na tela inicial de listagem, você pode buscar etiquetas específicas filtrando-as por status (**Ativa** ou **Inativa**) e pela caixa de busca de **Nome**[cite: 3]. Após preencher os critérios, clique em **"Consultar"** para obter os resultados[cite: 3].
+![filtraretiqyetas.png](./assets/filtraretiqyetas.png)
 
-![Filtro de Etiquetas](./assets/filtraretiqyetas.png)
+Ainda na tela inicial, teremos mais duas opções: Editar e Inativar/Ativar uma etiqueta.
 
-Ainda na tela inicial, estão disponíveis opções para gerenciar os cadastros existentes[cite: 3]:
+**Botão Editar:**
 
-**Edição de Registros**
-* **Editar:** Permite a edição de uma etiqueta já cadastrada[cite: 3]. Ao clicar neste ícone, você será redirecionado para a tela de cadastro para alterar o nome, a cor ou o status (inativar/ativar)[cite: 3].
-![Botão Editar](./assets/editarorigembotao.png)
+![editarorigembotao.png](./assets/editarorigembotao.png)
 
-**Controle de Status**
-* **Inativar / Ativar:** Permite desabilitar uma etiqueta ativa ou reativar uma etiqueta inativa[cite: 3]. Para evitar alterações acidentais, o sistema exigirá uma confirmação antes de efetuar esta ação[cite: 3].
-![Botão Ativar e Inativar](./assets/ativar-inativar.png)
-![Mensagem de Confirmação](./assets/desejaetiqueta.png)
+Permitirá a edição de uma etiqueta já cadastrada. Ao clicar na opção destacada abaixo, você será redirecionado para a mesma tela de cadastro, porém, com objetivo de editar o que foi selecionado podendo mudar o nome, cor, ou inativar/ativar.
+
+**Botão Inativar/Ativar:**
+
+![ativar-inativar.png](./assets/ativar-inativar.png)
+
+Permitirá ativar uma etiqueta que esteja inativa, ou inativar uma etiqueta que esteja ativa. O sistema exigirá uma confirmação antes de efetuar essa ação:
+
+![desejaetiqueta.png](./assets/desejaetiqueta.png)
+
+---

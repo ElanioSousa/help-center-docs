@@ -2,10 +2,11 @@
 id: "atendimentos-crm-completo"
 title: "CRM & Negociação (completo)"
 type: "manual"
+keywords: ["crm", "negociacao", "painel crm", "leads", "propostas", "fipe", "conversas", "tarefas", "desempenho", "funil"]
 last_updated: "2026-07-31"
 ---
 
-# CRM & Negociação
+# CRM & Negociação (completo)
 
 A página inicial da seção de **CRM e Negociação** exibe três painéis distintos: CRM, Negociação e Desempenho:
 

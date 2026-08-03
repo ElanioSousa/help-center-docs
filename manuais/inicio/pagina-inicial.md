@@ -2,6 +2,7 @@
 id: "inicio-pagina-inicial"
 title: "Página Inicial do Sistema"
 type: "reference"
+keywords: ["pagina inicial", "dashboard", "tela inicial", "navegacao", "barra lateral"]
 last_updated: "2026-07-31"
 ---
 

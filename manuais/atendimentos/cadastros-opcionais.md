@@ -2,6 +2,7 @@
 id: "cadastros-opcionais"
 title: "Cadastros: Opcionais"
 type: "manual"
+keywords: ["opcionais", "opcionais do veiculo", "airbag", "ar condicionado", "acessorios"]
 last_updated: "2026-07-31"
 ---
 
