@@ -7,18 +7,6 @@
     "resumo": "Agenda A Agenda é a ferramenta central para organizar a rotina da sua equipe comercial. Aqui você pode registrar compromissos, agendar retornos de leads e organizar o fluxo de visitas na loja. (Cole aqui o texto introdut"
   },
   {
-    "titulo": "Bem-vindo à Central de Ajuda",
-    "caminho": "inicio/sobre-a-central",
-    "tipo": "reference",
-    "palavras_chave": [
-      "bem vindo",
-      "sobre a central de ajuda",
-      "indice de manuais",
-      "central de ajuda"
-    ],
-    "resumo": "Bem-vindo à Central de Ajuda 📌 Bem-vindo! Aqui, você encontrará toda a documentação disponível sobre o sistema Repasys. Aproveite este espaço para aprender e esclarecer dúvidas sobre telas, opções e recursos do nosso si"
-  },
-  {
     "titulo": "Cadastros",
     "caminho": "atendimentos/cadastros",
     "tipo": "module-hub",
@@ -190,19 +178,6 @@
       "whatsapp"
     ],
     "resumo": "Módulo: Parâmetros 💡 Objetivo: O menu Parâmetros permite a personalização, configuração e adaptação do sistema às necessidades específicas de seus usuários ou do ambiente onde será utilizado. Eles funcionam como \"ajuste"
-  },
-  {
-    "titulo": "Página Inicial do Sistema",
-    "caminho": "inicio/pagina-inicial",
-    "tipo": "reference",
-    "palavras_chave": [
-      "pagina inicial",
-      "dashboard",
-      "tela inicial",
-      "navegacao",
-      "barra lateral"
-    ],
-    "resumo": "Página Inicial do Sistema Página inicial: Ao efetuar login no Repasys, o usuário será direcionado automaticamente para nossa página inicial. Esta página lhe permitirá acessar todas as opções do sistema forma aberta, como"
   },
   {
     "titulo": "Relatórios",
