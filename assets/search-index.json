@@ -222,7 +222,6 @@
     "titulo": "Relatórios",
     "caminho": "atendimentos/relatorios",
     "tipo": "module-hub",
-<<<<<<< HEAD
     "palavras_chave": [
       "relatorios",
       "relatorios atendimentos"
@@ -307,9 +306,5 @@
       "relatorio"
     ],
     "resumo": "SMS/Notificações Acesse o presente relatório através do caminho CRM & Negociação > Relatórios > SMS/Notificações. Este relatório tem objetivo de apresentar todas os SMS enviados e as notificações recebidas e respondidas "
-=======
-    "palavras_chave": [],
-    "resumo": "Relatórios 📌Sobre os relatóriosS Aqui você encontra todos os relatórios disponíveis no sistema. Selecione uma das opções abaixo para visualizar a documentação detalhada e entender os filtros e gráficos de cada um: CRM -"
->>>>>>> a42c0c4676c503d314b80a2b4e4a7029858325f6
   }
 ]
