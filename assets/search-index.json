@@ -210,5 +210,94 @@
       "barra lateral"
     ],
     "resumo": "Página Inicial do Sistema Página inicial: Ao efetuar login no Repasys, o usuário será direcionado automaticamente para nossa página inicial. Esta página lhe permitirá acessar todas as opções do sistema forma aberta, como"
+  },
+  {
+    "titulo": "Relatórios",
+    "caminho": "atendimentos/relatorios",
+    "tipo": "module-hub",
+    "palavras_chave": [
+      "relatorios",
+      "relatorios atendimentos"
+    ],
+    "resumo": "Relatórios CRM - Resumo CRM - Analítico CRM - Agenda Negociação - Resumo Negociação - Analítico Lojistas SMS/Notificações"
+  },
+  {
+    "titulo": "Relatórios: CRM - Agenda",
+    "caminho": "atendimentos/relatorios-crm-agenda",
+    "tipo": "manual",
+    "palavras_chave": [
+      "relatorio agenda",
+      "agendamentos",
+      "relatorio"
+    ],
+    "resumo": "CRM - Agenda Acesse o presente relatório através do caminho CRM & Negociação > Relatórios > CRM - Agenda. Este relatório tem objetivo de apresentar todos os agendamentos realizados na opção Agenda ou via CRM, com a opção"
+  },
+  {
+    "titulo": "Relatórios: CRM - Analítico",
+    "caminho": "atendimentos/relatorios-crm-analitico",
+    "tipo": "manual",
+    "palavras_chave": [
+      "relatorio crm analitico",
+      "atendimentos detalhado",
+      "relatorio"
+    ],
+    "resumo": "CRM - Analítico Acesse o presente relatório através do caminho CRM & Negociação > Relatórios > CRM - Analítico. Este relatório tem objetivo de apresentar de forma detalhada os atendimentos cadastrados via CRM no sistema,"
+  },
+  {
+    "titulo": "Relatórios: CRM - Resumo",
+    "caminho": "atendimentos/relatorios-crm-resumo",
+    "tipo": "manual",
+    "palavras_chave": [
+      "relatorio crm resumo",
+      "fases por origem",
+      "desistencias por origem",
+      "relatorio"
+    ],
+    "resumo": "CRM - Resumo Acesse o presente relatório através do caminho CRM & Negociação > Relatórios > CRM - Resumo. Este relatório tem objetivo de apresentar de forma resumida os atendimentos cadastrados via CRM no sistema, com a "
+  },
+  {
+    "titulo": "Relatórios: Lojistas",
+    "caminho": "atendimentos/relatorios-lojistas",
+    "tipo": "manual",
+    "palavras_chave": [
+      "relatorio lojistas",
+      "cadastro lojistas",
+      "relatorio"
+    ],
+    "resumo": "Lojistas Acesse o presente relatório através do caminho CRM & Negociação > Relatórios > Lojistas. Este relatório tem objetivo de apresentar o cadastro de todos os Lojistas inseridos no sistema, com a opção de filtrar pel"
+  },
+  {
+    "titulo": "Relatórios: Negociação - Analítico",
+    "caminho": "atendimentos/relatorios-negociacao-analitico",
+    "tipo": "manual",
+    "palavras_chave": [
+      "relatorio negociacao analitico",
+      "relatorio"
+    ],
+    "resumo": "Negociação - Analítico Acesse o presente relatório através do caminho CRM & Negociação > Relatórios > CRM - Resumo - Analítico. Este relatório tem objetivo de apresentar de forma detalhada as negociações inseridas no sis"
+  },
+  {
+    "titulo": "Relatórios: Negociação - Resumo",
+    "caminho": "atendimentos/relatorios-negociacao-resumo",
+    "tipo": "manual",
+    "palavras_chave": [
+      "relatorio negociacao resumo",
+      "conversoes desistencias",
+      "relatorio"
+    ],
+    "resumo": "Negociação - Resumo Acesse o presente relatório através do caminho CRM & Negociação > Relatórios > CRM - Negociação - Resumo. Este relatório tem objetivo de apresentar de forma resumida as negociação cadastrados no siste"
+  },
+  {
+    "titulo": "Relatórios: SMS/Notificações",
+    "caminho": "atendimentos/relatorios-sms-notificacoes",
+    "tipo": "manual",
+    "palavras_chave": [
+      "relatorio sms",
+      "notificacoes",
+      "whatsapp",
+      "email",
+      "relatorio"
+    ],
+    "resumo": "SMS/Notificações Acesse o presente relatório através do caminho CRM & Negociação > Relatórios > SMS/Notificações. Este relatório tem objetivo de apresentar todas os SMS enviados e as notificações recebidas e respondidas "
   }
 ]

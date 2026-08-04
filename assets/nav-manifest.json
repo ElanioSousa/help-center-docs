@@ -61,6 +61,52 @@
               "caminho": "atendimentos/cadastros-grupo"
             }
           ]
+        },
+        {
+          "tipo": "submenu",
+          "titulo": "Relatórios",
+          "itens": [
+            {
+              "tipo": "link",
+              "titulo": "Visão Geral",
+              "caminho": "atendimentos/relatorios"
+            },
+            {
+              "tipo": "link",
+              "titulo": "CRM - Resumo",
+              "caminho": "atendimentos/relatorios-crm-resumo"
+            },
+            {
+              "tipo": "link",
+              "titulo": "CRM - Analítico",
+              "caminho": "atendimentos/relatorios-crm-analitico"
+            },
+            {
+              "tipo": "link",
+              "titulo": "CRM - Agenda",
+              "caminho": "atendimentos/relatorios-crm-agenda"
+            },
+            {
+              "tipo": "link",
+              "titulo": "Negociação - Resumo",
+              "caminho": "atendimentos/relatorios-negociacao-resumo"
+            },
+            {
+              "tipo": "link",
+              "titulo": "Negociação - Analítico",
+              "caminho": "atendimentos/relatorios-negociacao-analitico"
+            },
+            {
+              "tipo": "link",
+              "titulo": "Lojistas",
+              "caminho": "atendimentos/relatorios-lojistas"
+            },
+            {
+              "tipo": "link",
+              "titulo": "SMS/Notificações",
+              "caminho": "atendimentos/relatorios-sms-notificacoes"
+            }
+          ]
         }
       ]
     },
