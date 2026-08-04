@@ -2,7 +2,6 @@
 
 ![Status](https://img.shields.io/badge/Status-Em_andamento-yellow)
 ![Tecnologia](https://img.shields.io/badge/Tech-Vanilla_JS-f7df1e)
-![Licença](https://img.shields.io/badge/Licença-MIT-blue)
 
 > Uma Single Page Application (SPA) leve, rápida e escalável para documentação de sistemas — construída sem frameworks pesados e sem banco de dados.
 
