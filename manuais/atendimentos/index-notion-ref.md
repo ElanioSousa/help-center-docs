@@ -1,7 +1,7 @@
 ---
 id: "atendimentos-index-ref"
 title: "Módulo: Atendimentos (referência antiga)"
-type: "module-hub"
+type: "reference"
 keywords: ["atendimentos", "menu atendimentos", "referencia antiga"]
 last_updated: "2026-07-31"
 ---

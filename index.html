@@ -26,11 +26,6 @@
     </div>
   </header>
 
-  <main class="main-content" id="inicio">
-      <!-- ÁREA DE BUSCA GLOBAL... -->
-    </div>
-  </header>
-
   <div class="app-shell">
     <aside class="sidebar card" aria-label="Menu lateral">
       <div class="brand">
@@ -45,91 +40,13 @@
       
       <p class="nav-title">Menu</p>
       <nav>
-        <ul class="nav-list" style="list-style: none; padding: 0;">
+        <ul class="nav-list" id="lista-menu" style="list-style: none; padding: 0;">
           <li style="margin-bottom: 10px;">
             <a class="nav-link" href="#" onclick="voltarParaHome()" style="display: block; padding: 10px; text-decoration: none; color: #2d3748; font-weight: bold;"><i class="fa-solid fa-house-chimney"></i> Página inicial</a>
           </li>
-          
-          <!-- Módulo: Atendimentos -->
-          <li class="nav-module">
-            <div class="nav-module-header" onclick="toggleSubMenu(this)">
-              <span><i class="fa-solid fa-users"></i> Atendimentos</span>
-              <span class="toggle-icon"><i class="fa-solid fa-circle-chevron-down"></i></span>
-            </div>
-            <ul class="sub-nav-list">
-              <li><a class="nav-link" href="#" onclick="carregarManual('atendimentos/index')">Visão Geral</a></li>
-              <li><a class="nav-link" href="#" onclick="carregarManual('atendimentos/crm')">CRM & Negociação</a></li>
-              <li><a class="nav-link" href="#" onclick="carregarManual('atendimentos/fluxo-loja')">Fluxo de Loja</a></li>
-              <li><a class="nav-link" href="#" onclick="carregarManual('atendimentos/agenda')">Agenda</a></li>
-              <li class="nav-module">
-                <div class="nav-module-header" onclick="toggleSubMenu(this)">
-                  <span>Cadastros</span>
-                  <span class="toggle-icon"><i class="fa-solid fa-circle-chevron-down"></i></span>
-                </div>
-                <ul class="sub-nav-list">
-                  <li><a class="nav-link" href="#" onclick="carregarManual('atendimentos/cadastros')">Visão Geral</a></li>
-                  <li><a class="nav-link" href="#" onclick="carregarManual('atendimentos/cadastros-etiquetas')">Etiquetas</a></li>
-                  <li><a class="nav-link" href="#" onclick="carregarManual('atendimentos/cadastros-motivos-desistencia')">Motivos de Desistência</a></li>
-                  <li><a class="nav-link" href="#" onclick="carregarManual('atendimentos/cadastros-origem-leads')">Origem dos Leads</a></li>
-                  <li><a class="nav-link" href="#" onclick="carregarManual('atendimentos/cadastros-checklist')">Checklist</a></li>
-                  <li><a class="nav-link" href="#" onclick="carregarManual('atendimentos/cadastros-opcionais')">Opcionais</a></li>
-                  <li><a class="nav-link" href="#" onclick="carregarManual('atendimentos/cadastros-grupo')">Grupo</a></li>
-                </ul>
-              </li>
-              <li><a class="nav-link" href="#" onclick="carregarManual('atendimentos/relatorios')">Relatórios</a></li>
-            </ul>
-          </li>
-
-          <!-- Módulo: Operações -->
-          <li class="nav-module">
-            <div class="nav-module-header" onclick="toggleSubMenu(this)">
-              <span><i class="fa-solid fa-gear"></i> Operação</span>
-              <span class="toggle-icon"><i class="fa-solid fa-circle-chevron-down"></i></i></span>
-            </div>
-            <ul class="sub-nav-list">
-              <li><a class="nav-link" href="#" onclick="carregarManual('operacao/index')">Visão Geral</a></li>
-              <li><a class="nav-link" href="#" onclick="carregarManual('operacao/operacoes')">Operações</a></li>
-              <li><a class="nav-link" href="#" onclick="carregarManual('operacao/assinatura-digital')">Assinatura Digital</a></li>
-              <li><a class="nav-link" href="#" onclick="carregarManual('operacao/template-contrato')">Template de contrato</a></li>
-              <li><a class="nav-link" href="#" onclick="carregarManual('operacao/pendencias')">Pendências</a></li>
-              <li><a class="nav-link" href="#" onclick="carregarManual('operacao/cadastros')">Cadastros</a></li>
-              <li><a class="nav-link" href="#" onclick="carregarManual('operacao/relatorios')">Relatórios</a></li>
-            </ul>
-          </li>
-
-          <!-- Módulo: Financeiro -->
-          <li class="nav-module">
-            <div class="nav-module-header" onclick="toggleSubMenu(this)">
-              <span><i class="fa-solid fa-sack-dollar"></i> Financeiro</span>
-              <span class="toggle-icon"><i class="fa-solid fa-circle-chevron-down"></i></i></span>
-            </div>
-            <ul class="sub-nav-list">
-              <li><a class="nav-link" href="#" onclick="carregarManual('financeiro/index')">Visão Geral</a></li>
-              <li><a class="nav-link" href="#" onclick="carregarManual('financeiro/titulo')">Título</a></li>
-              <li><a class="nav-link" href="#" onclick="carregarManual('financeiro/notas-fiscais')">Notas Fiscais (NFS-e)</a></li>
-              <li><a class="nav-link" href="#" onclick="carregarManual('financeiro/recorrencias')">Recorrências</a></li>
-              <li><a class="nav-link" href="#" onclick="carregarManual('financeiro/movimento-conta')">Movimento Conta</a></li>
-              <li><a class="nav-link" href="#" onclick="carregarManual('financeiro/conciliacao-bancaria')">Conciliação Bancária</a></li>
-              <li><a class="nav-link" href="#" onclick="carregarManual('financeiro/cadastros')">Cadastros</a></li>
-              <li><a class="nav-link" href="#" onclick="carregarManual('financeiro/relatorios')">Relatórios</a></li>
-            </ul>
-          </li>
-
-          <!-- Módulo: Parâmetros -->
-          <li class="nav-module">
-            <div class="nav-module-header" onclick="toggleSubMenu(this)">
-              <span><i class="fa-solid fa-sliders"></i> Parâmetros</span>
-              <span class="toggle-icon"><i class="fa-solid fa-circle-chevron-down"></i></i></span>
-            </div>
-            <ul class="sub-nav-list">
-              <li><a class="nav-link" href="#" onclick="carregarManual('parametros/index')">Visão Geral</a></li>
-              <li><a class="nav-link" href="#" onclick="carregarManual('parametros/consultar')">Consultar</a></li>
-              <li><a class="nav-link" href="#" onclick="carregarManual('parametros/empresas')">Empresas</a></li>
-              <li><a class="nav-link" href="#" onclick="carregarManual('parametros/usuarios')">Usuários</a></li>
-              <li><a class="nav-link" href="#" onclick="carregarManual('parametros/permissoes')">Permissões</a></li>
-              <li><a class="nav-link" href="#" onclick="carregarManual('parametros/auditoria')">Auditoria</a></li>
-            </ul>
-          </li>
+          <!-- Os módulos abaixo são renderizados dinamicamente por renderizarMenu(),
+               a partir de assets/nav-manifest.json (gerado por scripts/generate-manifest.js
+               com base no front-matter dos manuais). Nenhum módulo é escrito à mão aqui. -->
         </ul>
       </nav>
     </aside>
@@ -184,31 +101,31 @@
       <div class="article-list">
         <!-- Link 1: Lead -->
         <div class="article-item" onclick="carregarManual('atendimentos/crm')">
-          <span><i class="fa-solid fa-question"></i></i> Como cadastrar um lead?</span>
+          <span><i class="fa-solid fa-question"></i> Como cadastrar um lead?</span>
           <span class="arrow"><i class="fa-solid fa-arrow-right-long"></i></span>
         </div>
 
         <!-- Link 2: Negociação -->
         <div class="article-item" onclick="carregarManual('atendimentos/crm')">
-          <span><i class="fa-solid fa-question"></i></i> Como criar uma negociação?</span>
+          <span><i class="fa-solid fa-question"></i> Como criar uma negociação?</span>
           <span class="arrow"><i class="fa-solid fa-arrow-right-long"></i></span>
         </div>
 
         <!-- Link 3: Operação -->
-        <div class="article-item" onclick="carregarManual('operacao/operacoes')">
-          <span><i class="fa-solid fa-question"></i></i> Como criar uma operação?</span>
+        <div class="article-item" onclick="carregarManual('operacao/index')">
+          <span><i class="fa-solid fa-question"></i> Como criar uma operação?</span>
           <span class="arrow"><i class="fa-solid fa-arrow-right-long"></i></span>
         </div>
 
         <!-- Link 4: Título -->
-        <div class="article-item" onclick="carregarManual('financeiro/titulo')">
-          <span><i class="fa-solid fa-question"></i></i> Como lançar um título?</span>
+        <div class="article-item" onclick="carregarManual('financeiro/index')">
+          <span><i class="fa-solid fa-question"></i> Como lançar um título?</span>
           <span class="arrow"><i class="fa-solid fa-arrow-right-long"></i></span>
         </div>
 
         <!-- Link 5: Conciliação -->
-        <div class="article-item" onclick="carregarManual('financeiro/conciliacao-bancaria')">
-          <span><i class="fa-solid fa-question"></i></i> Como fazer conciliação bancária?</span>
+        <div class="article-item" onclick="carregarManual('financeiro/index')">
+          <span><i class="fa-solid fa-question"></i> Como fazer conciliação bancária?</span>
           <span class="arrow"><i class="fa-solid fa-arrow-right-long"></i></span>
         </div>
           
@@ -271,11 +188,90 @@
     }
 
     /* =========================================
+       MENU LATERAL DINÂMICO
+       =========================================
+       O menu não é mais escrito à mão aqui: ele é montado a partir de
+       assets/nav-manifest.json, gerado por scripts/generate-manifest.js
+       com base no front-matter (module/parent/order/nav_label) de cada
+       manual. Pra um manual novo aparecer no menu, basta esse front-matter
+       — não é preciso editar este arquivo.
+    */
+    function criarLinkDeManual(item) {
+      const li = document.createElement('li');
+      const a = document.createElement('a');
+      a.className = 'nav-link';
+      a.href = '#';
+      a.textContent = item.titulo;
+      a.addEventListener('click', (evento) => {
+        evento.preventDefault();
+        carregarManual(item.caminho);
+      });
+      li.appendChild(a);
+      return li;
+    }
+
+    function criarSubmenu(item, comIcone) {
+      const li = document.createElement('li');
+      li.className = 'nav-module';
+
+      const header = document.createElement('div');
+      header.className = 'nav-module-header';
+      header.addEventListener('click', () => toggleSubMenu(header));
+
+      const span = document.createElement('span');
+      if (comIcone && item.icone) {
+        span.innerHTML = `<i class="${item.icone}"></i> ${item.titulo}`;
+      } else {
+        span.textContent = item.titulo;
+      }
+
+      const toggleIcon = document.createElement('span');
+      toggleIcon.className = 'toggle-icon';
+      toggleIcon.innerHTML = '<i class="fa-solid fa-circle-chevron-down"></i>';
+
+      header.appendChild(span);
+      header.appendChild(toggleIcon);
+      li.appendChild(header);
+
+      const subLista = document.createElement('ul');
+      subLista.className = 'sub-nav-list';
+      item.itens.forEach((filho) => {
+        subLista.appendChild(criarItemDeMenu(filho, false));
+      });
+      li.appendChild(subLista);
+
+      return li;
+    }
+
+    function criarItemDeMenu(item, comIcone) {
+      if (item.tipo === 'submenu') return criarSubmenu(item, comIcone);
+      return criarLinkDeManual(item);
+    }
+
+    function renderizarMenu(manifest) {
+      const lista = document.getElementById('lista-menu');
+      (manifest.modulos || []).forEach((modulo) => {
+        lista.appendChild(criarSubmenu({ ...modulo, itens: modulo.itens }, true));
+      });
+    }
+
+    function carregarMenu() {
+      fetch('./assets/nav-manifest.json')
+        .then(resp => {
+          if (!resp.ok) throw new Error('Não foi possível carregar o menu');
+          return resp.json();
+        })
+        .then(manifest => renderizarMenu(manifest))
+        .catch(erro => console.error('Erro ao carregar menu lateral:', erro));
+    }
+    carregarMenu();
+
+    /* =========================================
        SISTEMA DE BUSCA INTERNA
        ========================================= 
        O índice (assets/search-index.json) é gerado automaticamente a
        partir do front-matter de todos os manuais — rode
-       "node scripts/generate-search-index.js" sempre que adicionar,
+       "node scripts/generate-manifest.js" sempre que adicionar,
        remover ou renomear um manual. Assim a busca nunca fica
        desatualizada em relação ao conteúdo real do site.
     */

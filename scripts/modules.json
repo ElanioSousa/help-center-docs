@@ -1,0 +1,6 @@
+[
+  { "id": "atendimentos", "label": "Atendimentos", "icone": "fa-solid fa-users", "ordem": 10 },
+  { "id": "operacao", "label": "Operação", "icone": "fa-solid fa-gear", "ordem": 20 },
+  { "id": "financeiro", "label": "Financeiro", "icone": "fa-solid fa-sack-dollar", "ordem": 30 },
+  { "id": "parametros", "label": "Parâmetros", "icone": "fa-solid fa-sliders", "ordem": 40 }
+]

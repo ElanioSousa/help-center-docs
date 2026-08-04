@@ -1,0 +1,107 @@
+{
+  "modulos": [
+    {
+      "id": "atendimentos",
+      "titulo": "Atendimentos",
+      "icone": "fa-solid fa-users",
+      "ordem": 10,
+      "itens": [
+        {
+          "tipo": "link",
+          "titulo": "Visão Geral",
+          "caminho": "atendimentos/index"
+        },
+        {
+          "tipo": "link",
+          "titulo": "Novo Atendimento (cadastro rápido)",
+          "caminho": "atendimentos/crm"
+        },
+        {
+          "tipo": "link",
+          "titulo": "CRM & Negociação (completo)",
+          "caminho": "atendimentos/crm-completo"
+        },
+        {
+          "tipo": "submenu",
+          "titulo": "Cadastros",
+          "itens": [
+            {
+              "tipo": "link",
+              "titulo": "Visão Geral",
+              "caminho": "atendimentos/cadastros"
+            },
+            {
+              "tipo": "link",
+              "titulo": "Etiquetas",
+              "caminho": "atendimentos/cadastros-etiquetas"
+            },
+            {
+              "tipo": "link",
+              "titulo": "Motivos de Desistência",
+              "caminho": "atendimentos/cadastros-motivos-desistencia"
+            },
+            {
+              "tipo": "link",
+              "titulo": "Origem dos Leads",
+              "caminho": "atendimentos/cadastros-origem-leads"
+            },
+            {
+              "tipo": "link",
+              "titulo": "Checklist",
+              "caminho": "atendimentos/cadastros-checklist"
+            },
+            {
+              "tipo": "link",
+              "titulo": "Opcionais",
+              "caminho": "atendimentos/cadastros-opcionais"
+            },
+            {
+              "tipo": "link",
+              "titulo": "Grupo",
+              "caminho": "atendimentos/cadastros-grupo"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "operacao",
+      "titulo": "Operação",
+      "icone": "fa-solid fa-gear",
+      "ordem": 20,
+      "itens": [
+        {
+          "tipo": "link",
+          "titulo": "Visão Geral",
+          "caminho": "operacao/index"
+        }
+      ]
+    },
+    {
+      "id": "financeiro",
+      "titulo": "Financeiro",
+      "icone": "fa-solid fa-sack-dollar",
+      "ordem": 30,
+      "itens": [
+        {
+          "tipo": "link",
+          "titulo": "Visão Geral",
+          "caminho": "financeiro/index"
+        }
+      ]
+    },
+    {
+      "id": "parametros",
+      "titulo": "Parâmetros",
+      "icone": "fa-solid fa-sliders",
+      "ordem": 40,
+      "itens": [
+        {
+          "tipo": "link",
+          "titulo": "Visão Geral",
+          "caminho": "parametros/index"
+        }
+      ]
+    }
+  ]
+}

@@ -1,10 +1,15 @@
 [
   {
-    "titulo": "Agenda",
-    "caminho": "atendimentos/agenda",
-    "tipo": "manual",
-    "palavras_chave": [],
-    "resumo": "Agenda A Agenda é a ferramenta central para organizar a rotina da sua equipe comercial. Aqui você pode registrar compromissos, agendar retornos de leads e organizar o fluxo de visitas na loja. (Cole aqui o texto introdut"
+    "titulo": "Bem-vindo à Central de Ajuda",
+    "caminho": "inicio/sobre-a-central",
+    "tipo": "reference",
+    "palavras_chave": [
+      "bem vindo",
+      "sobre a central de ajuda",
+      "indice de manuais",
+      "central de ajuda"
+    ],
+    "resumo": "Bem-vindo à Central de Ajuda 📌 Bem-vindo! Aqui, você encontrará toda a documentação disponível sobre o sistema Repasys. Aproveite este espaço para aprender e esclarecer dúvidas sobre telas, opções e recursos do nosso si"
   },
   {
     "titulo": "Cadastros",
@@ -94,8 +99,22 @@
     "resumo": "Origem Leads Este recurso permite cadastrar as várias vias pelas quais o lead pode chegar, conforme a realidade da sua loja. O cadastro de Origem dos Leads pode ser acessado em: Atendimentos > Cadastros > Origem Leads. C"
   },
   {
-    "titulo": "CRM & Negociação (completo)",
+    "titulo": "Como cadastrar um Novo Atendimento",
     "caminho": "atendimentos/crm",
+    "tipo": "manual",
+    "palavras_chave": [
+      "novo atendimento",
+      "cadastrar lead",
+      "novo cliente",
+      "adicionar lead",
+      "crm",
+      "formulario"
+    ],
+    "resumo": "Cadastro de Novo Atendimento O registro de um novo atendimento é a etapa inicial para inserir um cliente no seu funil de vendas do CRM. Preencha os dados com atenção para garantir um histórico completo e preciso da negoc"
+  },
+  {
+    "titulo": "CRM & Negociação (completo)",
+    "caminho": "atendimentos/crm-completo",
     "tipo": "manual",
     "palavras_chave": [
       "crm",
@@ -128,7 +147,7 @@
   {
     "titulo": "Módulo: Atendimentos (referência antiga)",
     "caminho": "atendimentos/index-notion-ref",
-    "tipo": "module-hub",
+    "tipo": "reference",
     "palavras_chave": [
       "atendimentos",
       "menu atendimentos",
@@ -180,10 +199,16 @@
     "resumo": "Módulo: Parâmetros 💡 Objetivo: O menu Parâmetros permite a personalização, configuração e adaptação do sistema às necessidades específicas de seus usuários ou do ambiente onde será utilizado. Eles funcionam como \"ajuste"
   },
   {
-    "titulo": "Relatórios",
-    "caminho": "atendimentos/relatorios",
-    "tipo": "module-hub",
-    "palavras_chave": [],
-    "resumo": "Relatórios 📌Sobre os relatóriosS Aqui você encontra todos os relatórios disponíveis no sistema. Selecione uma das opções abaixo para visualizar a documentação detalhada e entender os filtros e gráficos de cada um: CRM -"
+    "titulo": "Página Inicial do Sistema",
+    "caminho": "inicio/pagina-inicial",
+    "tipo": "reference",
+    "palavras_chave": [
+      "pagina inicial",
+      "dashboard",
+      "tela inicial",
+      "navegacao",
+      "barra lateral"
+    ],
+    "resumo": "Página Inicial do Sistema Página inicial: Ao efetuar login no Repasys, o usuário será direcionado automaticamente para nossa página inicial. Esta página lhe permitirá acessar todas as opções do sistema forma aberta, como"
   }
 ]

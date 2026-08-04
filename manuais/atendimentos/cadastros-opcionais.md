@@ -3,6 +3,10 @@ id: "cadastros-opcionais"
 title: "Cadastros: Opcionais"
 type: "manual"
 keywords: ["opcionais", "opcionais do veiculo", "airbag", "ar condicionado", "acessorios"]
+module: "atendimentos"
+parent: "atendimentos-cadastros"
+order: 50
+nav_label: "Opcionais"
 last_updated: "2026-07-31"
 ---
 

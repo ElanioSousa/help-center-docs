@@ -3,6 +3,9 @@ id: "atendimentos-index"
 title: "Módulo: Atendimentos"
 type: "module-hub"
 keywords: ["atendimentos", "menu atendimentos", "visao geral", "crm", "negociacao", "leads"]
+module: "atendimentos"
+order: 10
+nav_label: "Visão Geral"
 last_updated: "2026-07-18"
 ---
 

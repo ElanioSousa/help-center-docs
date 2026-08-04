@@ -3,6 +3,9 @@ id: "atendimentos-cadastros"
 title: "Cadastros"
 type: "module-hub"
 keywords: ["cadastros", "cadastros auxiliares", "atendimentos"]
+module: "atendimentos"
+order: 30
+nav_label: "Cadastros"
 last_updated: "2026-07-31"
 ---
 

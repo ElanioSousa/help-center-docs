@@ -3,6 +3,10 @@ id: "cadastros-checklist"
 title: "Cadastros: Checklist"
 type: "manual"
 keywords: ["checklist", "avaliacao do veiculo", "vistoria", "inspecao veicular"]
+module: "atendimentos"
+parent: "atendimentos-cadastros"
+order: 40
+nav_label: "Checklist"
 last_updated: "2026-07-31"
 ---
 

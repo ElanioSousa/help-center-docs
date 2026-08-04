@@ -3,6 +3,9 @@ id: "parametros-index"
 title: "Módulo: Parâmetros"
 type: "module-hub"
 keywords: ["parametros", "menu parametros", "configuracoes", "empresas", "usuarios", "lojistas", "whatsapp"]
+module: "parametros"
+order: 10
+nav_label: "Visão Geral"
 last_updated: "2026-07-31"
 ---
 

@@ -3,6 +3,10 @@ id: "cadastros-grupo"
 title: "Cadastros: Grupo (checklist)"
 type: "manual"
 keywords: ["grupo", "grupo de checklist", "organizar checklist"]
+module: "atendimentos"
+parent: "atendimentos-cadastros"
+order: 60
+nav_label: "Grupo"
 last_updated: "2026-07-31"
 ---
 

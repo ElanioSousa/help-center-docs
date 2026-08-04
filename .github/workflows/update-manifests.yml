@@ -1,0 +1,43 @@
+name: Atualizar menu e índice de busca
+
+# Roda automaticamente sempre que um manual é adicionado, removido ou
+# alterado, e comita de volta os artefatos gerados a partir do
+# front-matter dos manuais:
+#   - assets/search-index.json  (busca)
+#   - assets/nav-manifest.json  (menu lateral)
+# Assim, publicar uma feature nova nunca mais exige editar HTML/JS na
+# mão — só criar o arquivo .md na pasta certa, com o front-matter certo.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "manuais/**"
+      - "scripts/generate-manifest.js"
+      - "scripts/modules.json"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  gerar-artefatos:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Gerar search-index.json e nav-manifest.json
+        run: node scripts/generate-manifest.js
+
+      - name: Comitar alterações (se houver)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add assets/search-index.json assets/nav-manifest.json
+          git diff --cached --quiet || git commit -m "chore: atualiza menu e índice de busca automaticamente"
+          git push
+

@@ -3,6 +3,10 @@ id: "cadastros-etiquetas"
 title: "Cadastros: Etiquetas"
 type: "manual"
 keywords: ["etiquetas", "tags", "quente", "morno", "frio", "classificar lead"]
+module: "atendimentos"
+parent: "atendimentos-cadastros"
+order: 10
+nav_label: "Etiquetas"
 last_updated: "2026-07-31"
 ---
 

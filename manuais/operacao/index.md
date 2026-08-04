@@ -3,6 +3,9 @@ id: "operacao-index"
 title: "Módulo: Operação"
 type: "module-hub"
 keywords: ["operacao", "menu operacao", "operacoes", "contratos", "pendencias"]
+module: "operacao"
+order: 10
+nav_label: "Visão Geral"
 last_updated: "2026-07-31"
 ---
 
