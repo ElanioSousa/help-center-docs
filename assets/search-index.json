@@ -1,5 +1,12 @@
 [
   {
+    "titulo": "Agenda",
+    "caminho": "atendimentos/agenda",
+    "tipo": "manual",
+    "palavras_chave": [],
+    "resumo": "Agenda A Agenda é a ferramenta central para organizar a rotina da sua equipe comercial. Aqui você pode registrar compromissos, agendar retornos de leads e organizar o fluxo de visitas na loja. (Cole aqui o texto introdut"
+  },
+  {
     "titulo": "Bem-vindo à Central de Ajuda",
     "caminho": "inicio/sobre-a-central",
     "tipo": "reference",
@@ -210,5 +217,12 @@
       "barra lateral"
     ],
     "resumo": "Página Inicial do Sistema Página inicial: Ao efetuar login no Repasys, o usuário será direcionado automaticamente para nossa página inicial. Esta página lhe permitirá acessar todas as opções do sistema forma aberta, como"
+  },
+  {
+    "titulo": "Relatórios",
+    "caminho": "atendimentos/relatorios",
+    "tipo": "module-hub",
+    "palavras_chave": [],
+    "resumo": "Relatórios 📌Sobre os relatóriosS Aqui você encontra todos os relatórios disponíveis no sistema. Selecione uma das opções abaixo para visualizar a documentação detalhada e entender os filtros e gráficos de cada um: CRM -"
   }
 ]
