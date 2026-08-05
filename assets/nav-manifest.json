@@ -125,6 +125,73 @@
           "tipo": "link",
           "titulo": "Visão Geral",
           "caminho": "operacao/index"
+        },
+        {
+          "tipo": "link",
+          "titulo": "Operação",
+          "caminho": "operacao/operacao"
+        },
+        {
+          "tipo": "link",
+          "titulo": "Pendências",
+          "caminho": "operacao/pendencias"
+        },
+        {
+          "tipo": "submenu",
+          "titulo": "Cadastros",
+          "itens": [
+            {
+              "tipo": "link",
+              "titulo": "Visão Geral",
+              "caminho": "operacao/cadastros"
+            },
+            {
+              "tipo": "link",
+              "titulo": "Tipo de Pendência",
+              "caminho": "operacao/cadastros-tipo-pendencia"
+            },
+            {
+              "tipo": "link",
+              "titulo": "Tipo de Documento",
+              "caminho": "operacao/cadastros-tipo-documento"
+            },
+            {
+              "tipo": "link",
+              "titulo": "Tipo de Anexo",
+              "caminho": "operacao/cadastros-tipo-anexo"
+            }
+          ]
+        },
+        {
+          "tipo": "submenu",
+          "titulo": "Relatórios",
+          "itens": [
+            {
+              "tipo": "link",
+              "titulo": "Visão Geral",
+              "caminho": "operacao/relatorios"
+            },
+            {
+              "tipo": "link",
+              "titulo": "Analítico",
+              "caminho": "operacao/relatorios-analitico"
+            },
+            {
+              "tipo": "link",
+              "titulo": "Débitos Operações",
+              "caminho": "operacao/relatorios-debitos-operacoes"
+            },
+            {
+              "tipo": "link",
+              "titulo": "Dashboard Loja",
+              "caminho": "operacao/relatorios-dashboard-loja"
+            },
+            {
+              "tipo": "link",
+              "titulo": "Dashboard Comparativo",
+              "caminho": "operacao/relatorios-dashboard-loja-comparativo"
+            }
+          ]
         }
       ]
     },

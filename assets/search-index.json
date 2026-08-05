@@ -38,6 +38,16 @@
     "resumo": "Cadastros Esta área reúne os cadastros auxiliares usados pelo módulo de Atendimentos. Clique em um item para abrir o manual correspondente: Etiquetas Motivos de Desistência Origem dos Leads Checklist Opcionais Grupo"
   },
   {
+    "titulo": "Cadastros",
+    "caminho": "operacao/cadastros",
+    "tipo": "module-hub",
+    "palavras_chave": [
+      "cadastros operacao",
+      "cadastros auxiliares"
+    ],
+    "resumo": "Tipo de pendência Tipo de documento Tipo de anexo"
+  },
+  {
     "titulo": "Cadastros: Checklist",
     "caminho": "atendimentos/cadastros-checklist",
     "tipo": "manual",
@@ -112,6 +122,36 @@
       "de onde veio o cliente"
     ],
     "resumo": "Origem Leads Este recurso permite cadastrar as várias vias pelas quais o lead pode chegar, conforme a realidade da sua loja. O cadastro de Origem dos Leads pode ser acessado em: Atendimentos > Cadastros > Origem Leads. C"
+  },
+  {
+    "titulo": "Cadastros: Tipo de Anexo",
+    "caminho": "operacao/cadastros-tipo-anexo",
+    "tipo": "manual",
+    "palavras_chave": [
+      "tipo de anexo",
+      "anexos operacao"
+    ],
+    "resumo": "Este recurso permite cadastrar os possíveis tipos de anexos que poderão ser utilizados para classificar arquivos anexados na etapa 4. Anexos, no recurso de Operação. Podendo ser um recibo de multa ou outro encargo do veí"
+  },
+  {
+    "titulo": "Cadastros: Tipo de Documento",
+    "caminho": "operacao/cadastros-tipo-documento",
+    "tipo": "manual",
+    "palavras_chave": [
+      "tipo de documento",
+      "documentos operacao"
+    ],
+    "resumo": "Este recurso permite cadastrar os possíveis tipos de documentos que poderão ser utilizados para registrar os débitos do veículo, na etapa 2.2 Débitos do veículo, no recurso de Operação. Podendo ser obrigações como DPVAT,"
+  },
+  {
+    "titulo": "Cadastros: Tipo de Pendência",
+    "caminho": "operacao/cadastros-tipo-pendencia",
+    "tipo": "manual",
+    "palavras_chave": [
+      "tipo de pendencia",
+      "status de bloqueio"
+    ],
+    "resumo": "Este recurso permite cadastrar as possíveis variedades de pendências que poderão ser utilizadas ao incluir uma pendência no recurso de Operação. Por exemplo: recibos, comprovantes, documentos (garantia, impostos), etc. O"
   },
   {
     "titulo": "Como cadastrar um Novo Atendimento",
@@ -192,11 +232,9 @@
     "palavras_chave": [
       "operacao",
       "menu operacao",
-      "operacoes",
-      "contratos",
-      "pendencias"
+      "visao geral"
     ],
-    "resumo": "Módulo: Operação ℹ️ Objetivo: A função primordial do menu Operação é viabilizar o gerenciamento e validação das transações de compra e venda de veículos, uma vez que a proposta correspondente foi previamente aceita por m"
+    "resumo": "ℹ️ Objetivo: A função primordial do menu Operação é viabilizar o gerenciamento e validação das transações de compra e venda de veículos, uma vez que a proposta correspondente foi previamente aceita por meio do menu Atend"
   },
   {
     "titulo": "Módulo: Parâmetros",
@@ -214,6 +252,23 @@
     "resumo": "Módulo: Parâmetros 💡 Objetivo: O menu Parâmetros permite a personalização, configuração e adaptação do sistema às necessidades específicas de seus usuários ou do ambiente onde será utilizado. Eles funcionam como \"ajuste"
   },
   {
+    "titulo": "Operação",
+    "caminho": "operacao/operacao",
+    "tipo": "manual",
+    "palavras_chave": [
+      "operacao",
+      "operacoes",
+      "compra e venda",
+      "filtros operacao",
+      "aprovar compra",
+      "aprovar venda",
+      "emissao contrato",
+      "cancelar operacao",
+      "reabrir operacao"
+    ],
+    "resumo": "A Operação é o resultado que obtemos após uma oferta ser aceita. Sendo assim, este recurso é responsável por enfim efetivar a compra e venda do veículo, após a oferta do lojista ser aceita pelo negociador no menu anterio"
+  },
+  {
     "titulo": "Página Inicial do Sistema",
     "caminho": "inicio/pagina-inicial",
     "tipo": "reference",
@@ -227,6 +282,18 @@
     "resumo": "Página Inicial do Sistema Página inicial: Ao efetuar login no Repasys, o usuário será direcionado automaticamente para nossa página inicial. Esta página lhe permitirá acessar todas as opções do sistema forma aberta, como"
   },
   {
+    "titulo": "Pendências",
+    "caminho": "operacao/pendencias",
+    "tipo": "manual",
+    "palavras_chave": [
+      "pendencias",
+      "pendencia operacao",
+      "tipo de pendencia",
+      "bloqueio operacao"
+    ],
+    "resumo": "Acessível através do caminho Operação > Pendências. As pendências são registros que pode ser inseridos dentro da operação e irão indicar que nesta existem compromissos não cumpridos. Sendo assim, nesta tela o sistema per"
+  },
+  {
     "titulo": "Relatórios",
     "caminho": "atendimentos/relatorios",
     "tipo": "module-hub",
@@ -235,6 +302,26 @@
       "relatorios atendimentos"
     ],
     "resumo": "Relatórios CRM - Resumo CRM - Analítico CRM - Agenda Negociação - Resumo Negociação - Analítico Lojistas SMS/Notificações"
+  },
+  {
+    "titulo": "Relatórios",
+    "caminho": "operacao/relatorios",
+    "tipo": "module-hub",
+    "palavras_chave": [
+      "relatorios operacao",
+      "relatorios"
+    ],
+    "resumo": "Analítico Débitos operações Dashboard Loja Dashboard Loja Comparativo"
+  },
+  {
+    "titulo": "Relatórios: Analítico",
+    "caminho": "operacao/relatorios-analitico",
+    "tipo": "manual",
+    "palavras_chave": [
+      "relatorio analitico operacao",
+      "relatorio"
+    ],
+    "resumo": "Acesse o presente relatório através do caminho Operação > Relatórios > Analítico. Este relatório tem objetivo de apresentar de forma detalhada todas as operações de compra/venda realizadas no sistema, com a opção de filt"
   },
   {
     "titulo": "Relatórios: CRM - Agenda",
@@ -269,6 +356,37 @@
       "relatorio"
     ],
     "resumo": "CRM - Resumo Acesse o presente relatório através do caminho CRM & Negociação > Relatórios > CRM - Resumo. Este relatório tem objetivo de apresentar de forma resumida os atendimentos cadastrados via CRM no sistema, com a "
+  },
+  {
+    "titulo": "Relatórios: Dashboard Loja",
+    "caminho": "operacao/relatorios-dashboard-loja",
+    "tipo": "manual",
+    "palavras_chave": [
+      "dashboard loja",
+      "relatorio"
+    ],
+    "resumo": "Relatórios: Dashboard Loja ⚠️ Conteúdo pendente. Este manual ainda não foi escrito na base de origem (Notion) — a página existe, mas veio sem texto. Assim que o conteúdo for redigido, basta atualizar este arquivo."
+  },
+  {
+    "titulo": "Relatórios: Dashboard Loja Comparativo",
+    "caminho": "operacao/relatorios-dashboard-loja-comparativo",
+    "tipo": "manual",
+    "palavras_chave": [
+      "dashboard loja comparativo",
+      "relatorio"
+    ],
+    "resumo": "Relatórios: Dashboard Loja Comparativo ⚠️ Conteúdo pendente. Este manual ainda não foi escrito na base de origem (Notion) — a página existe, mas veio sem texto. Assim que o conteúdo for redigido, basta atualizar este arq"
+  },
+  {
+    "titulo": "Relatórios: Débitos das Operações",
+    "caminho": "operacao/relatorios-debitos-operacoes",
+    "tipo": "manual",
+    "palavras_chave": [
+      "relatorio debitos",
+      "debitos operacoes",
+      "relatorio"
+    ],
+    "resumo": "Acesse o presente relatório através do caminho Operação > Relatórios > Débitos operações. O relatório tem objetivo de apresentar e fornecer detalhes dos débitos cadastrados no recurso Operação - 2.2 Débitos do veículo, l"
   },
   {
     "titulo": "Relatórios: Lojistas",
