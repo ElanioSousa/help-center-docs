@@ -2,53 +2,89 @@
 id: "atendimentos-agenda"
 title: "Agenda"
 type: "manual"
-last_updated: "2026-08-01"
+keywords: ["agenda", "agendamento", "compromisso", "negociador", "exportar agenda", "grade agenda", "visualizacao mes semana dia lista"]
+module: "atendimentos"
+order: 28
+nav_label: "Agenda"
+last_updated: "2026-08-05"
 ---
 
 # Agenda
 
-A Agenda é a ferramenta central para organizar a rotina da sua equipe comercial. Aqui você pode registrar compromissos, agendar retornos de leads e organizar o fluxo de visitas na loja.
+Acessível através do caminho Atendimentos > Agenda.
 
-*(Cole aqui o texto introdutório do seu manual)*
+O recurso agenda permite cadastrar, visualizar e interagir com os compromissos marcados:
 
-![Visão Geral da Tela de Agenda](./assets/telaagenda.png)
+![telaagenda.png](./assets/telaagenda.png)
 
----
+### Criando um novo Agendamento
 
-## Modos de Visualização
+Para criar um novo compromisso na agenda, utilize o botão Criar:
 
-O sistema oferece diferentes formas de visualizar seus compromissos para facilitar a organização diária. Você pode alternar entre elas utilizando o menu da agenda:
+![criaragenda.png](./assets/criaragenda.png)
 
-### 1. Visão Mensal
-Uma visão panorâmica de todos os compromissos do mês.
-![Visão Mensal](./assets/agendames.png)
-*(Cole aqui a explicação de como usar a visão mensal)*
+Tela de criação do compromisso:
 
-### 2. Visão Semanal
-Ideal para planejar a semana de trabalho e distribuir os horários de forma equilibrada.
-![Visão Semanal](./assets/agendasemana.png)
-*(Cole aqui a explicação de como usar a visão semanal)*
+![criaragendarecurso.png](./assets/criaragendarecurso.png)
 
-### 3. Visão Diária (Dias)
-Foco total nos compromissos do dia atual, organizados por horário.
-![Visão por Dias](./assets/agendadias.png)
-*(Cole aqui a explicação de como usar a visão diária)*
+- **Negociador:** Informe qual o negociador o qual terá o compromisso `(campo obrigatório)`;
+- **Empresa:** Indique qual a empresa (loja) se refere o compromisso `(campo obrigatório).`
+- **Data Agendamento:** Insira a data do compromisso bem como o horário `(campo obrigatório)`;
+- **Assunto:** Indique qual o assunto do compromisso: Avaliação, Vistoria, Pendência, Negociação, Retorno de ligação ou Visita `(campo obrigatório)`;
+- **Observação:** Digite uma observação para este compromisso `(campo obrigatório)`;
+- **Cliente:** Digite o nome do cliente a qual se refere o compromisso `(campo obrigatório)`;
+- **Veículo:** Informe o veículo em questão;
+- **Cidade:** Informe a cidade do cliente;
+- **Telefone:** Informe o telefone do cliente;
 
-### 4. Visão em Lista
-Uma listagem sequencial e detalhada de todas as tarefas e reuniões, fácil de ler em dispositivos móveis.
-![Visão em Lista](./assets/agendalista.png)
-*(Cole aqui a explicação de como usar a visão em lista)*
+Clique em Salvar para concluir.
 
----
+### Visualizando e concluindo o Agendamento
 
-## Gerenciamento de Compromissos
+Assim que inserido o agendamento for inserido, o mesmo ficará disponível na grade da agenda conforme data e horário inseridos:
 
-### Grade de Agendamento
-Ao criar ou visualizar os horários disponíveis, você utilizará a grade de agendamento do sistema.
-![Grade de Agendamento](./assets/gradeagendamento.png)
-*(Cole aqui a explicação sobre como selecionar horários na grade)*
+![gradeagendamento.png](./assets/gradeagendamento.png)
 
-### Detalhes do Agendamento
-Para visualizar, editar ou concluir um compromisso, clique sobre ele para abrir a tela de detalhes.
-![Detalhes do Agendamento](./assets/detalhesagendamento.png)
-*(Cole aqui a explicação sobre os campos do detalhamento: responsável, descrição, status, etc)*
+Para mais detalhes sobre o agendamento, clique sobre o mesmo. A seguinte tela será apresentada, com os detalhes digitados do compromisso na etapa anterior:
+
+![detalhesagendamento.png](./assets/detalhesagendamento.png)
+
+Clique no botão “Concluir Agendamento” para indicar ao sistema que este compromisso foi realizado, desta forma este agendamento não será mais apresen
+
+### Opção Exportar a Agenda
+
+A Agenda possui um recurso de exportação, o qual está disponível através do botão abaixo:
+
+![exportaragenda.png](./assets/exportaragenda.png)
+
+O resultado da exportação será um arquivo Excel com todas as informações dos agendamentos exportados:
+
+![agendaexportada.png](./assets/agendaexportada.png)
+
+### Opções de visualização de grade da Agenda
+
+A Agenda possui quatro opções de visualização, sendo elas:
+
+#### Mês
+
+Visualizando por Mês, o resultado será uma grade com os dias completos do mês atual:
+
+![agendames.png](./assets/agendames.png)
+
+#### Semana
+
+Visualizando por Semana, o resultado será uma grade somente com os dias da semana atual:
+
+![agendasemana.png](./assets/agendasemana.png)
+
+#### Dia
+
+Visualizando por Dia, o resultado será uma grade somente com os horários do dia de hoje:
+
+![agendadias.png](./assets/agendadias.png)
+
+#### Lista
+
+Visualizando como Lista, o resultado será apenas a listagem dos compromissos dos dias:
+
+![agendalista.png](./assets/agendalista.png)

@@ -22,6 +22,11 @@
           "caminho": "atendimentos/crm-completo"
         },
         {
+          "tipo": "link",
+          "titulo": "Agenda",
+          "caminho": "atendimentos/agenda"
+        },
+        {
           "tipo": "submenu",
           "titulo": "Cadastros",
           "itens": [

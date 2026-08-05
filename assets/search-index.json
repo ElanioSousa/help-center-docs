@@ -3,8 +3,16 @@
     "titulo": "Agenda",
     "caminho": "atendimentos/agenda",
     "tipo": "manual",
-    "palavras_chave": [],
-    "resumo": "Agenda A Agenda é a ferramenta central para organizar a rotina da sua equipe comercial. Aqui você pode registrar compromissos, agendar retornos de leads e organizar o fluxo de visitas na loja. (Cole aqui o texto introdut"
+    "palavras_chave": [
+      "agenda",
+      "agendamento",
+      "compromisso",
+      "negociador",
+      "exportar agenda",
+      "grade agenda",
+      "visualizacao mes semana dia lista"
+    ],
+    "resumo": "Agenda Acessível através do caminho Atendimentos > Agenda. O recurso agenda permite cadastrar, visualizar e interagir com os compromissos marcados: Criando um novo Agendamento Para criar um novo compromisso na agenda, ut"
   },
   {
     "titulo": "Bem-vindo à Central de Ajuda",
