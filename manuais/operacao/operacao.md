@@ -122,7 +122,7 @@ O cadastro do débito é feito através do botão “+ Adicionar débito”, des
 
 Informe os dados exibidos na tela para registrar o débito. É importante observar o campo Fornecedor, que é o “dono” do débito. Por exemplo: em caso de uma multa o fornecedor será o DETRAN, sendo assim, o DENTRAN deverá estar previamente cadastrado na base. 
 
-> 💡 Caso não exista o **Fornecedor** em questão, é possível cadastrá-lo pelo atalho “Cadastrar novo”, destacado na imagem acima. Este cadastro também é feito em Financeiro > Cadastros > Fornecedor. Clique **AQUI** para acessá-lo.
+> 💡 Caso não exista o **Fornecedor** em questão, é possível cadastrá-lo pelo atalho “Cadastrar novo”, destacado na imagem acima. Este cadastro também é feito em Financeiro > Cadastros > Fornecedor. Clique <a href="#" onclick="carregarManual(&#39;financeiro/cadastros-fornecedor&#39;)"><strong>AQUI</strong></a> para acessá-lo.
 >
 > O **tipo do documento** também é personalizável no sistema através do caminho: Operação > Cadastros > Tipo de documento. Clique <a href="#" onclick="carregarManual('operacao/cadastros-tipo-documento')">**AQUI**</a> para acessá-lo.
 
@@ -148,7 +148,7 @@ O cadastro do pagamento é feito através do botão “+ Adicionar pagamento”,
 
 Caso seja escolhida a opção **DOC** ou **TED**, o sistema apresentará automaticamente mais campos na tela para que sejam preenchidos banco, agência, conta e tipo da conta conforme imagem abaixo:
 
-> 💡 O cadastro da **forma de pagamento** é feito através do sistema, de forma personalizável. Através do caminho: Financeiro > Cadastros > Forma Pagamento. Clique **AQUI** para acessá-lo.
+> 💡 O cadastro da **forma de pagamento** é feito através do sistema, de forma personalizável. Através do caminho: Financeiro > Cadastros > Forma Pagamento. Clique <a href="#" onclick="carregarManual(&#39;financeiro/cadastros-forma-pagamento&#39;)"><strong>AQUI</strong></a> para acessá-lo.
 
 ![addformapagamento.png](./assets/operacao-addformapagamento.png)
 
@@ -204,7 +204,7 @@ O cadastro do pagamento é feito através do botão “+ Adicionar pagamento”,
 
 Caso seja escolhida a opção **DOC** ou **TED**, o sistema apresentará automaticamente mais um campo na tela para que seja preenchido o Banco.
 
-> 💡 O cadastro da **forma de pagamento** é feito através do sistema, de forma personalizável. Através do caminho: Financeiro > Cadastros > Forma Pagamento. Clique **AQUI** para acessá-lo.
+> 💡 O cadastro da **forma de pagamento** é feito através do sistema, de forma personalizável. Através do caminho: Financeiro > Cadastros > Forma Pagamento. Clique <a href="#" onclick="carregarManual(&#39;financeiro/cadastros-forma-pagamento&#39;)"><strong>AQUI</strong></a> para acessá-lo.
 
 ### 4.Lojista
 

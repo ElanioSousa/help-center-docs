@@ -205,6 +205,88 @@
           "tipo": "link",
           "titulo": "Visão Geral",
           "caminho": "financeiro/index"
+        },
+        {
+          "tipo": "link",
+          "titulo": "Título",
+          "caminho": "financeiro/titulo"
+        },
+        {
+          "tipo": "link",
+          "titulo": "Movimento Conta",
+          "caminho": "financeiro/movimento-conta"
+        },
+        {
+          "tipo": "link",
+          "titulo": "Conciliação Bancária",
+          "caminho": "financeiro/conciliacao-bancaria"
+        },
+        {
+          "tipo": "submenu",
+          "titulo": "Cadastros",
+          "itens": [
+            {
+              "tipo": "link",
+              "titulo": "Visão Geral",
+              "caminho": "financeiro/cadastros"
+            },
+            {
+              "tipo": "link",
+              "titulo": "Fornecedor",
+              "caminho": "financeiro/cadastros-fornecedor"
+            },
+            {
+              "tipo": "link",
+              "titulo": "Banco",
+              "caminho": "financeiro/cadastros-banco"
+            },
+            {
+              "tipo": "link",
+              "titulo": "Conta",
+              "caminho": "financeiro/cadastros-conta"
+            },
+            {
+              "tipo": "link",
+              "titulo": "Forma de Pagamento",
+              "caminho": "financeiro/cadastros-forma-pagamento"
+            },
+            {
+              "tipo": "link",
+              "titulo": "Plano de Contas",
+              "caminho": "financeiro/cadastros-plano-de-contas"
+            }
+          ]
+        },
+        {
+          "tipo": "submenu",
+          "titulo": "Relatórios",
+          "itens": [
+            {
+              "tipo": "link",
+              "titulo": "Visão Geral",
+              "caminho": "financeiro/relatorios"
+            },
+            {
+              "tipo": "link",
+              "titulo": "Título Analítico",
+              "caminho": "financeiro/relatorios-titulo-analitico"
+            },
+            {
+              "tipo": "link",
+              "titulo": "Movimento Conta Analítico",
+              "caminho": "financeiro/relatorios-movimento-conta-analitico"
+            },
+            {
+              "tipo": "link",
+              "titulo": "DRE Gerencial",
+              "caminho": "financeiro/relatorios-dre-gerencial"
+            },
+            {
+              "tipo": "link",
+              "titulo": "Dashboard",
+              "caminho": "financeiro/relatorios-dashboard"
+            }
+          ]
         }
       ]
     },
@@ -218,6 +300,31 @@
           "tipo": "link",
           "titulo": "Visão Geral",
           "caminho": "parametros/index"
+        },
+        {
+          "tipo": "link",
+          "titulo": "Empresas",
+          "caminho": "parametros/empresas"
+        },
+        {
+          "tipo": "link",
+          "titulo": "Lojistas",
+          "caminho": "parametros/lojistas"
+        },
+        {
+          "tipo": "link",
+          "titulo": "Usuários",
+          "caminho": "parametros/usuarios"
+        },
+        {
+          "tipo": "link",
+          "titulo": "Extrato de Créditos",
+          "caminho": "parametros/extrato-creditos"
+        },
+        {
+          "tipo": "link",
+          "titulo": "Integração WhatsApp",
+          "caminho": "parametros/integracao-whatsapp"
         }
       ]
     }

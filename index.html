@@ -19,7 +19,7 @@
     </div>
     <div class="navbar-right">
       <div class="voltar-sistema">
-        <a href="https://app.repasys.com.br/" target="_blank" style="text-decoration: none; color: #2d3748; font-weight: bold;">
+        <a id="link-voltar-sistema" href="https://app.repasys.com.br/" target="_blank" style="text-decoration: none; color: #2d3748; font-weight: bold;">
           <i class="fa-solid fa-arrow-left"></i> Voltar ao sistema
         </a>
       </div>
@@ -143,6 +143,53 @@
 
   <!-- SCRIPTS -->
   <script>
+    /* =========================================
+       BOTÃO "VOLTAR AO SISTEMA"
+       =========================================
+       Esta central de ajuda é compartilhada por todos os clientes, mas cada
+       um acessa sua própria instância em sistema.{clientekey}.repasys.com.br.
+       Para o botão levar de volta à instância correta, descobrimos a origem
+       na seguinte ordem de prioridade:
+       1) sessionStorage — já detectada antes nesta mesma aba (SPA não recarrega).
+       2) Parâmetro ?origem= na URL, caso o sistema decida enviá-lo explicitamente.
+       3) document.referrer — a página do sistema que teve o link clicado.
+       Se nenhuma delas resultar num domínio *.repasys.com.br válido, mantém o
+       link padrão definido no href do botão.
+    */
+    function origemEhValida(hostname) {
+      return /(^|\.)repasys\.com\.br$/i.test(hostname);
+    }
+
+    function definirLinkVoltarSistema() {
+      const botao = document.getElementById('link-voltar-sistema');
+      if (!botao) return;
+
+      let origem = sessionStorage.getItem('origemSistema');
+
+      if (!origem) {
+        const paramOrigem = new URLSearchParams(window.location.search).get('origem');
+        if (paramOrigem) {
+          try {
+            const url = new URL(paramOrigem);
+            if (origemEhValida(url.hostname)) origem = url.origin;
+          } catch (erro) { /* parâmetro inválido, ignora */ }
+        }
+      }
+
+      if (!origem && document.referrer) {
+        try {
+          const url = new URL(document.referrer);
+          if (origemEhValida(url.hostname)) origem = url.origin;
+        } catch (erro) { /* referrer inválido, ignora */ }
+      }
+
+      if (origem) {
+        sessionStorage.setItem('origemSistema', origem);
+        botao.href = origem + '/';
+      }
+    }
+    definirLinkVoltarSistema();
+
     // Função para renderizar os Manuais em MD
     function carregarManual(nomeArquivo) {
       const caminhoDoArquivo = `./manuais/${nomeArquivo}.md`;

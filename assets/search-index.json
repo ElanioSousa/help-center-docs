@@ -39,6 +39,16 @@
   },
   {
     "titulo": "Cadastros",
+    "caminho": "financeiro/cadastros",
+    "tipo": "module-hub",
+    "palavras_chave": [
+      "cadastros financeiro",
+      "cadastros auxiliares"
+    ],
+    "resumo": "Fornecedor Banco Conta Forma Pagamento Plano de Contas"
+  },
+  {
+    "titulo": "Cadastros",
     "caminho": "operacao/cadastros",
     "tipo": "module-hub",
     "palavras_chave": [
@@ -46,6 +56,16 @@
       "cadastros auxiliares"
     ],
     "resumo": "Tipo de pendência Tipo de documento Tipo de anexo"
+  },
+  {
+    "titulo": "Cadastros: Banco",
+    "caminho": "financeiro/cadastros-banco",
+    "tipo": "manual",
+    "palavras_chave": [
+      "banco",
+      "cadastro de banco"
+    ],
+    "resumo": "O recurso permite o cadastro e gerenciamento de forma eficiente dos bancos que mais tarde serão utilizados nos lançamentos de títulos no Financeiro. O cadastro do banco pode ser acessado também pelo caminho: Financeiro >"
   },
   {
     "titulo": "Cadastros: Checklist",
@@ -60,6 +80,17 @@
     "resumo": "Checklist Este recurso permite cadastrar o checklist, que é a relação das características físicas do veículo as quais mais tarde serão utilizadas na etapa de avaliação do mesmo. Nesta etapa, é feito o checklist marcando "
   },
   {
+    "titulo": "Cadastros: Conta",
+    "caminho": "financeiro/cadastros-conta",
+    "tipo": "manual",
+    "palavras_chave": [
+      "conta",
+      "conta bancaria",
+      "cadastro de conta"
+    ],
+    "resumo": "O recurso permite o cadastro e gerenciamento de forma eficiente das contas que mais tarde serão utilizadas nos lançamentos de títulos no Financeiro. O cadastro da conta pode ser acessado também pelo caminho: Financeiro >"
+  },
+  {
     "titulo": "Cadastros: Etiquetas",
     "caminho": "atendimentos/cadastros-etiquetas",
     "tipo": "manual",
@@ -72,6 +103,26 @@
       "classificar lead"
     ],
     "resumo": "Etiquetas Este recurso permite cadastrar etiquetas, que são características que poderão ser atribuídas tanto a um lead quanto a uma negociação, diretamente em seus respectivos painéis. Neste exemplo, temos etiquetas cada"
+  },
+  {
+    "titulo": "Cadastros: Forma de Pagamento",
+    "caminho": "financeiro/cadastros-forma-pagamento",
+    "tipo": "manual",
+    "palavras_chave": [
+      "forma de pagamento",
+      "cadastro forma pagamento"
+    ],
+    "resumo": "O recurso permite o cadastro e gerencianento de forma eficiente das formas de pagamento, que mais tarde serão utilizadas nos lançamentos de títulos no Financeiro. Por exemplo: dinheiro, PIX, cartão de crédito, cheque e e"
+  },
+  {
+    "titulo": "Cadastros: Fornecedor",
+    "caminho": "financeiro/cadastros-fornecedor",
+    "tipo": "manual",
+    "palavras_chave": [
+      "fornecedor",
+      "cadastro de fornecedor"
+    ],
+    "resumo": "O recurso permite o cadastro e gerenciamento de forma eficiente dos forncedores, que mais tarde serão utilizadas nos lançamentos de títulos no Financeiro. O cadastro do fornecedor pode ser acessado também pelo caminho: F"
   },
   {
     "titulo": "Cadastros: Grupo (checklist)",
@@ -124,6 +175,17 @@
     "resumo": "Origem Leads Este recurso permite cadastrar as várias vias pelas quais o lead pode chegar, conforme a realidade da sua loja. O cadastro de Origem dos Leads pode ser acessado em: Atendimentos > Cadastros > Origem Leads. C"
   },
   {
+    "titulo": "Cadastros: Plano de Contas",
+    "caminho": "financeiro/cadastros-plano-de-contas",
+    "tipo": "manual",
+    "palavras_chave": [
+      "plano de contas",
+      "plano de despesas",
+      "plano de receitas"
+    ],
+    "resumo": "O recurso permite o cadastro e gerenciamento de forma eficiente do plano de contas. Neste campo o usuário poderá estruturar todo o plano de contas de sua empresa entre Despesas, Receitas e outros. O objetivo principal de"
+  },
+  {
     "titulo": "Cadastros: Tipo de Anexo",
     "caminho": "operacao/cadastros-tipo-anexo",
     "tipo": "manual",
@@ -168,6 +230,17 @@
     "resumo": "Cadastro de Novo Atendimento O registro de um novo atendimento é a etapa inicial para inserir um cliente no seu funil de vendas do CRM. Preencha os dados com atenção para garantir um histórico completo e preciso da negoc"
   },
   {
+    "titulo": "Conciliação Bancária",
+    "caminho": "financeiro/conciliacao-bancaria",
+    "tipo": "manual",
+    "palavras_chave": [
+      "conciliacao bancaria",
+      "extrato bancario",
+      "ofx"
+    ],
+    "resumo": "A conciliação bancária é um processo de verificação e comparação entre os registros financeiros de sua empresa (como o saldo de caixa e as movimentações internas) e o extrato fornecido pelo banco. O objetivo é garantir q"
+  },
+  {
     "titulo": "CRM & Negociação (completo)",
     "caminho": "atendimentos/crm-completo",
     "tipo": "manual",
@@ -184,6 +257,49 @@
       "funil"
     ],
     "resumo": "CRM & Negociação (completo) A página inicial da seção de CRM e Negociação exibe três painéis distintos: CRM, Negociação e Desempenho: Para buscar CRMs ou Negociações com uma busca mais refinada utilize a opção “Filtro”, "
+  },
+  {
+    "titulo": "Empresas",
+    "caminho": "parametros/empresas",
+    "tipo": "manual",
+    "palavras_chave": [
+      "empresas",
+      "cadastro de empresa",
+      "lojas"
+    ],
+    "resumo": "Utilize o recurso de parâmetro para visualizar as empresas cadastradas e realizar a edição dos parâmetros, configurações e permissões das empresas. O caminho para Empresas pode ser acessado pelo menu Parâmetros > Empresa"
+  },
+  {
+    "titulo": "Extrato de Créditos",
+    "caminho": "parametros/extrato-creditos",
+    "tipo": "manual",
+    "palavras_chave": [
+      "extrato de creditos",
+      "saldo de creditos",
+      "consumo de creditos"
+    ],
+    "resumo": "Parâmetros > Extrato de Créditos O módulo Parâmetros > Extrato de Créditos permite acompanhar os créditos disponíveis, utilizados e lançados no sistema. Ele auxilia no controle de saldo e movimentações financeiras associ"
+  },
+  {
+    "titulo": "Integração WhatsApp",
+    "caminho": "parametros/integracao-whatsapp",
+    "tipo": "manual",
+    "palavras_chave": [
+      "integracao whatsapp",
+      "whatsapp",
+      "notificacoes whatsapp"
+    ],
+    "resumo": "A funcionalidade irá possibilitar que: Novas conversas recebidas no WhatsApp seja integrado automaticamente no sistema; Você converse com o cliente diretamente pelo sistema através do WhatsApp, com qualquer usuário do si"
+  },
+  {
+    "titulo": "Lojistas",
+    "caminho": "parametros/lojistas",
+    "tipo": "manual",
+    "palavras_chave": [
+      "lojistas",
+      "cadastro de lojista"
+    ],
+    "resumo": "Utilize este recurso para visualizar a relação de lojistas e seus status, bem como criar novos cadastros de usuários e realizar ações de edições. O caminho para acesso ao lojista pode ser feito através do menu Parâmetros"
   },
   {
     "titulo": "Módulo: Atendimentos",
@@ -217,13 +333,9 @@
     "palavras_chave": [
       "financeiro",
       "menu financeiro",
-      "contas a pagar",
-      "contas a receber",
-      "titulos",
-      "extrato bancario",
-      "fornecedores"
+      "visao geral"
     ],
-    "resumo": "Módulo: Financeiro 💡 Objetivo: O menu Financeiro permite a gestão completa de contas a pagar e receber, com cadastro e controle de títulos provisionados ou já movimentados. Também oferece um extrato detalhado das contas"
+    "resumo": "💡 Objetivo: O menu Financeiro permite a gestão completa de contas a pagar e receber, com cadastro e controle de títulos provisionados ou já movimentados. Também oferece um extrato detalhado das contas cadastradas, refle"
   },
   {
     "titulo": "Módulo: Operação",
@@ -243,13 +355,21 @@
     "palavras_chave": [
       "parametros",
       "menu parametros",
-      "configuracoes",
-      "empresas",
-      "usuarios",
-      "lojistas",
-      "whatsapp"
+      "visao geral",
+      "configuracoes"
     ],
-    "resumo": "Módulo: Parâmetros 💡 Objetivo: O menu Parâmetros permite a personalização, configuração e adaptação do sistema às necessidades específicas de seus usuários ou do ambiente onde será utilizado. Eles funcionam como \"ajuste"
+    "resumo": "💡 Objetivo: O menu Parâmetros permite a personalização, configuração e adaptação do sistema às necessidades específicas de seus usuários ou do ambiente onde será utilizado. Eles funcionam como \"ajustes\" ou \"regras\" pred"
+  },
+  {
+    "titulo": "Movimento Conta",
+    "caminho": "financeiro/movimento-conta",
+    "tipo": "manual",
+    "palavras_chave": [
+      "movimento conta",
+      "extrato",
+      "movimentacao financeira"
+    ],
+    "resumo": "Movimento de Conta refere-se às transações realizadas em uma conta bancária durante um período específico. Essas transações incluem todas as entradas (créditos) e saídas (débitos), como depósitos, transferências, pagamen"
   },
   {
     "titulo": "Operação",
@@ -302,6 +422,16 @@
       "relatorios atendimentos"
     ],
     "resumo": "Relatórios CRM - Resumo CRM - Analítico CRM - Agenda Negociação - Resumo Negociação - Analítico Lojistas SMS/Notificações"
+  },
+  {
+    "titulo": "Relatórios",
+    "caminho": "financeiro/relatorios",
+    "tipo": "module-hub",
+    "palavras_chave": [
+      "relatorios financeiro",
+      "relatorios"
+    ],
+    "resumo": "Titulo Analítico Movimento Conta Analítico DRE Gerencial Dashboard"
   },
   {
     "titulo": "Relatórios",
@@ -358,6 +488,16 @@
     "resumo": "CRM - Resumo Acesse o presente relatório através do caminho CRM & Negociação > Relatórios > CRM - Resumo. Este relatório tem objetivo de apresentar de forma resumida os atendimentos cadastrados via CRM no sistema, com a "
   },
   {
+    "titulo": "Relatórios: Dashboard",
+    "caminho": "financeiro/relatorios-dashboard",
+    "tipo": "manual",
+    "palavras_chave": [
+      "dashboard financeiro",
+      "relatorio"
+    ],
+    "resumo": "O Dashboard é uma ferramenta visual que permite: Visualização centralizada de dados importantes do negócio. Auxilio na tomada de decisões baseada em dados concretos. Acompanhamento de metas e objetivos. Identificação ráp"
+  },
+  {
     "titulo": "Relatórios: Dashboard Loja",
     "caminho": "operacao/relatorios-dashboard-loja",
     "tipo": "manual",
@@ -389,6 +529,17 @@
     "resumo": "Acesse o presente relatório através do caminho Operação > Relatórios > Débitos operações. O relatório tem objetivo de apresentar e fornecer detalhes dos débitos cadastrados no recurso Operação - 2.2 Débitos do veículo, l"
   },
   {
+    "titulo": "Relatórios: DRE Gerencial",
+    "caminho": "financeiro/relatorios-dre-gerencial",
+    "tipo": "manual",
+    "palavras_chave": [
+      "dre gerencial",
+      "demonstrativo resultado",
+      "relatorio"
+    ],
+    "resumo": "Demonstração do Resultado do Exercício A DRE (Demonstração do Resultado do Exercício) é um relatório gerencial que apresenta o desempenho financeiro da empresa durante um período específico. Importância da DRE Auxilia na"
+  },
+  {
     "titulo": "Relatórios: Lojistas",
     "caminho": "atendimentos/relatorios-lojistas",
     "tipo": "manual",
@@ -398,6 +549,16 @@
       "relatorio"
     ],
     "resumo": "Lojistas Acesse o presente relatório através do caminho CRM & Negociação > Relatórios > Lojistas. Este relatório tem objetivo de apresentar o cadastro de todos os Lojistas inseridos no sistema, com a opção de filtrar pel"
+  },
+  {
+    "titulo": "Relatórios: Movimento Conta Analítico",
+    "caminho": "financeiro/relatorios-movimento-conta-analitico",
+    "tipo": "manual",
+    "palavras_chave": [
+      "relatorio movimento conta analitico",
+      "relatorio"
+    ],
+    "resumo": "O relatório de movimento conta analítico possibilitara a visualização da movimentação bancaria das contas cadastradas. Para acessar o relatório de movimento de conta analítico, clique no menu Financeiro>Relatórios>Movime"
   },
   {
     "titulo": "Relatórios: Negociação - Analítico",
@@ -432,5 +593,41 @@
       "relatorio"
     ],
     "resumo": "SMS/Notificações Acesse o presente relatório através do caminho CRM & Negociação > Relatórios > SMS/Notificações. Este relatório tem objetivo de apresentar todas os SMS enviados e as notificações recebidas e respondidas "
+  },
+  {
+    "titulo": "Relatórios: Título Analítico",
+    "caminho": "financeiro/relatorios-titulo-analitico",
+    "tipo": "manual",
+    "palavras_chave": [
+      "relatorio titulo analitico",
+      "relatorio"
+    ],
+    "resumo": "O relatório analítico é um documento que apresenta, de forma detalhada e estruturada, uma análise profunda de um determinado conjunto de dados, informações ou situações. Seu objetivo principal é fornecer uma visão crític"
+  },
+  {
+    "titulo": "Título",
+    "caminho": "financeiro/titulo",
+    "tipo": "manual",
+    "palavras_chave": [
+      "titulo",
+      "contas a pagar",
+      "contas a receber",
+      "nova receita",
+      "nova despesa",
+      "transferencia entre contas"
+    ],
+    "resumo": "Utilize o menu Títulos para cadastrar e gerenciar lançamentos financeiros, sejam documentos de receitas ou de despesas. Para buscar lançamentos de títulos no financeiro com uma busca mais refinada utilize a opção “Filtro"
+  },
+  {
+    "titulo": "Usuários",
+    "caminho": "parametros/usuarios",
+    "tipo": "manual",
+    "palavras_chave": [
+      "usuarios",
+      "cadastro de usuario",
+      "permissoes",
+      "acesso"
+    ],
+    "resumo": "A tela de visualização e cadastro de usuários é uma interface desenvolvida para gerenciar informações relacionadas a usuários no sistema. Sua principal função é fornecer um ponto centralizado onde é possível realizar dua"
   }
 ]
