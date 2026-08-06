@@ -216,20 +216,6 @@
     "resumo": "Este recurso permite cadastrar as possíveis variedades de pendências que poderão ser utilizadas ao incluir uma pendência no recurso de Operação. Por exemplo: recibos, comprovantes, documentos (garantia, impostos), etc. O"
   },
   {
-    "titulo": "Como cadastrar um Novo Atendimento",
-    "caminho": "atendimentos/crm",
-    "tipo": "manual",
-    "palavras_chave": [
-      "novo atendimento",
-      "cadastrar lead",
-      "novo cliente",
-      "adicionar lead",
-      "crm",
-      "formulario"
-    ],
-    "resumo": "Cadastro de Novo Atendimento O registro de um novo atendimento é a etapa inicial para inserir um cliente no seu funil de vendas do CRM. Preencha os dados com atenção para garantir um histórico completo e preciso da negoc"
-  },
-  {
     "titulo": "Conciliação Bancária",
     "caminho": "financeiro/conciliacao-bancaria",
     "tipo": "manual",
@@ -313,18 +299,7 @@
       "negociacao",
       "leads"
     ],
-    "resumo": "Atendimentos 📌 Sobre este Módulo O módulo de Atendimentos é a porta de entrada do Repasys. É aqui que sua equipe vai registrar o primeiro contato com o cliente, organizar o fluxo de visitas na loja física e conduzir as "
-  },
-  {
-    "titulo": "Módulo: Atendimentos (referência antiga)",
-    "caminho": "atendimentos/index-notion-ref",
-    "tipo": "reference",
-    "palavras_chave": [
-      "atendimentos",
-      "menu atendimentos",
-      "referencia antiga"
-    ],
-    "resumo": "Módulo: Atendimentos (referência antiga) ℹ️ Objetivo: O menu Atendimentos desempenha um papel fundamental como ponto de partida para o primeiro contato com o cliente, bem como para a subsequente transição para a fase de "
+    "resumo": "Atendimentos 💡 Sobre este Módulo ℹ️ Objetivo: O módulo de Atendimentos é a porta de entrada do Repasys. É aqui que sua equipe vai registrar o primeiro contato com o cliente, organizar o fluxo de visitas na loja física e"
   },
   {
     "titulo": "Módulo: Financeiro",
@@ -335,7 +310,7 @@
       "menu financeiro",
       "visao geral"
     ],
-    "resumo": "💡 Objetivo: O menu Financeiro permite a gestão completa de contas a pagar e receber, com cadastro e controle de títulos provisionados ou já movimentados. Também oferece um extrato detalhado das contas cadastradas, refle"
+    "resumo": "💡 Sobre este Módulo ℹ️ Objetivo: O menu Financeiro permite a gestão completa de contas a pagar e receber, com cadastro e controle de títulos provisionados ou já movimentados. Também oferece um extrato detalhado das cont"
   },
   {
     "titulo": "Módulo: Operação",
@@ -346,7 +321,7 @@
       "menu operacao",
       "visao geral"
     ],
-    "resumo": "ℹ️ Objetivo: A função primordial do menu Operação é viabilizar o gerenciamento e validação das transações de compra e venda de veículos, uma vez que a proposta correspondente foi previamente aceita por meio do menu Atend"
+    "resumo": "💡 Sobre este Módulo ℹ️ Objetivo: A função primordial do menu Operação é viabilizar o gerenciamento e validação das transações de compra e venda de veículos, uma vez que a proposta correspondente foi previamente aceita p"
   },
   {
     "titulo": "Módulo: Parâmetros",
@@ -358,7 +333,7 @@
       "visao geral",
       "configuracoes"
     ],
-    "resumo": "💡 Objetivo: O menu Parâmetros permite a personalização, configuração e adaptação do sistema às necessidades específicas de seus usuários ou do ambiente onde será utilizado. Eles funcionam como \"ajustes\" ou \"regras\" pred"
+    "resumo": "💡 Sobre este Módulo ℹ️ Objetivo: O menu Parâmetros permite a personalização, configuração e adaptação do sistema às necessidades específicas de seus usuários ou do ambiente onde será utilizado. Eles funcionam como \"ajus"
   },
   {
     "titulo": "Movimento Conta",

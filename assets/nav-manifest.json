@@ -13,11 +13,6 @@
         },
         {
           "tipo": "link",
-          "titulo": "Novo Atendimento (cadastro rápido)",
-          "caminho": "atendimentos/crm"
-        },
-        {
-          "tipo": "link",
           "titulo": "CRM & Negociação (completo)",
           "caminho": "atendimentos/crm-completo"
         },
