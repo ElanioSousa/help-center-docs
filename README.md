@@ -18,7 +18,6 @@
 - [Como adicionar um novo manual](#-como-adicionar-um-novo-manual)
 - [Como rodar localmente](#-como-rodar-localmente)
 - [Roadmap](#-roadmap)
-- [Contribuindo](#-contribuindo)
 
 ---
 
@@ -94,9 +93,7 @@ Depois, acesse `http://localhost:8080` no navegador.
 - [ ] Adicionar modo escuro
 - [ ] Expandir cobertura de manuais para todos os módulos do sistema
 
-## 🤝 Contribuindo
 
-Contribuições são bem-vindas! Sinta-se à vontade para abrir uma *issue* ou enviar um *pull request* com sugestões, correções ou novos manuais.
 
 
 ---
