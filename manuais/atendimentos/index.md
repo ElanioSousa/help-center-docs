@@ -18,7 +18,7 @@ last_updated: "2026-07-18"
 
 Escolha uma das funcionalidades abaixo para ver o passo a passo detalhado:
 
-* <a href="#" onclick="carregarManual('atendimentos/crm')"><b>CRM & Negociação</b></a>
+* <a href="#" onclick="carregarManual('atendimentos/crm-completo')"><b>CRM & Negociação</b></a>
 Descubra como criar um novo atendimento, gerenciar sua carteira de clientes e avançar suas negociações no funil de vendas.
 
 * <a href="#" onclick="carregarManual('atendimentos/fluxo-loja')"><b>Fluxo de Loja</b></a>
