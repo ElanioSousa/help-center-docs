@@ -9,7 +9,7 @@ nav_label: "Visão Geral"
 last_updated: "2026-08-05"
 ---
 
-💡 **Objetivo:**  O menu *Parâmetros* permite a personalização, configuração e adaptação do sistema às necessidades específicas de seus usuários ou do ambiente onde será utilizado. Eles funcionam como "ajustes" ou "regras" predefinidas que determinam o comportamento do sistema, garantindo eficiência, conformidade e usabilidade.
+> 💡 **Objetivo:**  O menu *Parâmetros* permite a personalização, configuração e adaptação do sistema às necessidades específicas de seus usuários ou do ambiente onde será utilizado. Eles funcionam como "ajustes" ou "regras" predefinidas que determinam o comportamento do sistema, garantindo eficiência, conformidade e usabilidade.
 
 ## Itens do menu:
 
@@ -22,3 +22,4 @@ last_updated: "2026-08-05"
 <a href="#" onclick="carregarManual('parametros/extrato-creditos')">Extrato de créditos</a>
 
 <a href="#" onclick="carregarManual('parametros/integracao-whatsapp')">Integração WhatsApp</a>
+

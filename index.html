@@ -1,25 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Central de Ajuda Repasys — manuais e tutoriais para usar o sistema." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap">
+
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-  
+
   <!-- Biblioteca para traduzir Markdown para HTML -->
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <title>Central de Ajuda - Repasys</title>
 </head>
 <body>
-  
+
   <!-- BARRA DE NAVEGAÇÃO SUPERIOR -->
-<header class="top-navbar">
+  <header class="top-navbar">
     <div class="navbar-left">
+      <button type="button" class="menu-toggle-mobile" id="botao-menu-mobile" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-lateral">
+        <i class="fa-solid fa-bars"></i>
+      </button>
       <div class="logo">
-        <img src="assets/logo_repasys.png" alt="logo" style="height: 40px; width: auto;">
+        <img src="assets/logo_repasys.png" alt="Repasys" style="height: 34px; width: auto;">
       </div>
     </div>
     <div class="navbar-right">
       <div class="voltar-sistema">
-        <a id="link-voltar-sistema" href="https://app.repasys.com.br/" target="_blank" style="text-decoration: none; color: #2d3748; font-weight: bold;">
+        <a id="link-voltar-sistema" href="https://app.repasys.com.br/" target="_blank">
           <i class="fa-solid fa-arrow-left"></i> Voltar ao sistema
         </a>
       </div>
@@ -27,7 +38,9 @@
   </header>
 
   <div class="app-shell">
-    <aside class="sidebar card" aria-label="Menu lateral">
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+    <aside class="sidebar card" id="menu-lateral" aria-label="Menu lateral">
       <div class="brand">
         <div class="brand-icon">
           <i class="fa-solid fa-book-open-reader"></i>
@@ -37,12 +50,12 @@
           <span>Central de Ajuda Repasys</span>
         </div>
       </div>
-      
+
       <p class="nav-title">Menu</p>
       <nav>
-        <ul class="nav-list" id="lista-menu" style="list-style: none; padding: 0;">
-          <li style="margin-bottom: 10px;">
-            <a class="nav-link" href="#" onclick="voltarParaHome()" style="display: block; padding: 10px; text-decoration: none; color: #2d3748; font-weight: bold;"><i class="fa-solid fa-house-chimney"></i> Página inicial</a>
+        <ul class="nav-list" id="lista-menu">
+          <li>
+            <a class="nav-link" href="#" onclick="voltarParaHome(); return false;"><i class="fa-solid fa-house-chimney"></i> Página inicial</a>
           </li>
           <!-- Os módulos abaixo são renderizados dinamicamente por renderizarMenu(),
                a partir de assets/nav-manifest.json (gerado por scripts/generate-manifest.js
@@ -51,91 +64,105 @@
       </nav>
     </aside>
 
-<main class="main-content" id="inicio">
-      
-      <!-- 1. ÁREA DE BUSCA GLOBAL (Agora está fora do dashboard, sempre visível!) -->
-      <section class="hero" style="margin-bottom: 24px;">
-        <h2>Encontre tutoriais e manuais para usar nosso sistema.</h2>
-          <form class="search-box" onsubmit="realizarBusca(event)">
-            <input type="search" id="campo-busca" placeholder="Busque por leads, operações, relatórios..." />
-            <button type="submit">🔎</button>
-          </form>
+    <main class="main-content" id="inicio">
+
+      <!-- 1. FAIXA DE ROTA: busca global sempre visível -->
+      <section class="hero">
+        <svg class="hero-route" viewBox="0 0 300 260" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M300 20 C 200 20, 180 90, 110 100 C 40 110, 30 170, -10 190" stroke="white" stroke-width="2" stroke-dasharray="1 10" stroke-linecap="round"/>
+          <circle cx="110" cy="100" r="5" fill="white" fill-opacity="0.9"/>
+          <circle cx="-10" cy="190" r="5" fill="white" fill-opacity="0.9"/>
+          <circle cx="300" cy="20" r="5" fill="white" fill-opacity="0.9"/>
+        </svg>
+        <span class="hero-eyebrow"><span class="dot"></span> Central de Ajuda Repasys</span>
+        <h2>Como podemos ajudar você hoje?</h2>
+        <p class="hero-sub">Manuais, passo a passos e respostas rápidas sobre leads, operações, financeiro e parâmetros do sistema.</p>
+        <form class="search-box" onsubmit="realizarBusca(event)" role="search">
+          <label for="campo-busca" class="sr-only">Buscar na Central de Ajuda</label>
+          <input type="search" id="campo-busca" placeholder="Busque por leads, operações, relatórios..." />
+          <button type="submit" aria-label="Buscar"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </form>
+        <p class="search-hint">Dica: pressione <kbd>/</kbd> em qualquer lugar da página para buscar rapidamente.</p>
       </section>
 
       <!-- 2. Painel Inicial (Dashboard) -->
       <div id="dashboard-home">
         <section class="section">
+          <div class="section-heading">
+            <h3>Navegue por módulo</h3>
+            <span>4 áreas do sistema</span>
+          </div>
           <div class="category-grid">
-            <article class="category-card" onclick="carregarManual('atendimentos/index')" style="cursor: pointer;">
-              <h4><i class="fa-solid fa-users"></i> Atendimentos</h4>
-              <p>Módulo de CRM, Fluxo de Loja e Cadastros.</p>
+            <article class="category-card" tabindex="0" onclick="carregarManual('atendimentos/index', [{titulo:'Atendimentos', caminho:'atendimentos/index'}])" onkeydown="if(event.key==='Enter')this.click()">
+              <div class="category-icon"><i class="fa-solid fa-users"></i></div>
+              <h4>Atendimentos</h4>
+              <p>Módulo de CRM, fluxo de loja e cadastros.</p>
+              <span class="category-count" data-count-for="atendimentos"></span>
             </article>
-            <article class="category-card" onclick="carregarManual('operacao/index')" style="cursor: pointer;">
-              <h4><i class="fa-solid fa-cogs"></i> Operações</h4>
+            <article class="category-card" tabindex="0" onclick="carregarManual('operacao/index', [{titulo:'Operações', caminho:'operacao/index'}])" onkeydown="if(event.key==='Enter')this.click()">
+              <div class="category-icon"><i class="fa-solid fa-gears"></i></div>
+              <h4>Operações</h4>
               <p>Assinaturas, contratos e pendências.</p>
+              <span class="category-count" data-count-for="operacao"></span>
             </article>
-            <article class="category-card" onclick="carregarManual('financeiro/index')" style="cursor: pointer;">
-              <h4><i class="fa-solid fa-sack-dollar"></i> Financeiro</h4>
+            <article class="category-card" tabindex="0" onclick="carregarManual('financeiro/index', [{titulo:'Financeiro', caminho:'financeiro/index'}])" onkeydown="if(event.key==='Enter')this.click()">
+              <div class="category-icon"><i class="fa-solid fa-sack-dollar"></i></div>
+              <h4>Financeiro</h4>
               <p>Títulos, notas, conciliação e caixa.</p>
+              <span class="category-count" data-count-for="financeiro"></span>
             </article>
-            <article class="category-card" onclick="carregarManual('parametros/index')" style="cursor: pointer;">
-              <h4><i class="fa-solid fa-sliders"></i> Parâmetros</h4>
+            <article class="category-card" tabindex="0" onclick="carregarManual('parametros/index', [{titulo:'Parâmetros', caminho:'parametros/index'}])" onkeydown="if(event.key==='Enter')this.click()">
+              <div class="category-icon"><i class="fa-solid fa-sliders"></i></div>
+              <h4>Parâmetros</h4>
               <p>Configurações globais e permissões.</p>
+              <span class="category-count" data-count-for="parametros"></span>
             </article>
           </div>
         </section>
       </div>
 
       <!-- 3. Vitrine do Manual (Onde o .md será carregado) -->
-      <div id="conteudo-markdown" class="card" style="display: none; padding: 40px; background: #ffffff; border-radius: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); min-height: 400px;">
-          <!-- O conteúdo do .md entra aqui -->
+      <div id="conteudo-markdown" class="card" style="display: none;">
+          <!-- O conteúdo do .md entra aqui, precedido pela trilha (breadcrumb) -->
       </div>
 
     </main>
 
-   <aside class="right-panel card">
-      <h3 style="display: flex; align-items: center; gap: 10px; margin-bottom: 20px; font-size: 1.2em; color: #1a202c;">
-        <i class="fa-solid fa-newspaper"></i> Dúvidas frequentes
-      </h3>
-      
+   <aside class="right-panel card" aria-label="Dúvidas frequentes">
+      <h3><i class="fa-solid fa-newspaper"></i> Dúvidas frequentes</h3>
+
       <div class="article-list">
-        <!-- Link 1: Lead -->
-        <div class="article-item" onclick="carregarManual('atendimentos/crm')">
+        <div class="article-item" tabindex="0" onclick="carregarManual('atendimentos/crm', [{titulo:'Atendimentos', caminho:'atendimentos/index'},{titulo:'Como cadastrar um lead?', caminho:'atendimentos/crm'}])" onkeydown="if(event.key==='Enter')this.click()">
           <span><i class="fa-solid fa-question"></i> Como cadastrar um lead?</span>
           <span class="arrow"><i class="fa-solid fa-arrow-right-long"></i></span>
         </div>
 
-        <!-- Link 2: Negociação -->
-        <div class="article-item" onclick="carregarManual('atendimentos/crm')">
+        <div class="article-item" tabindex="0" onclick="carregarManual('atendimentos/crm-completo', [{titulo:'Atendimentos', caminho:'atendimentos/index'},{titulo:'Como criar uma negociação?', caminho:'atendimentos/crm-completo'}])" onkeydown="if(event.key==='Enter')this.click()">
           <span><i class="fa-solid fa-question"></i> Como criar uma negociação?</span>
           <span class="arrow"><i class="fa-solid fa-arrow-right-long"></i></span>
         </div>
 
-        <!-- Link 3: Operação -->
-        <div class="article-item" onclick="carregarManual('operacao/index')">
+        <div class="article-item" tabindex="0" onclick="carregarManual('operacao/index', [{titulo:'Operações', caminho:'operacao/index'}])" onkeydown="if(event.key==='Enter')this.click()">
           <span><i class="fa-solid fa-question"></i> Como criar uma operação?</span>
           <span class="arrow"><i class="fa-solid fa-arrow-right-long"></i></span>
         </div>
 
-        <!-- Link 4: Título -->
-        <div class="article-item" onclick="carregarManual('financeiro/index')">
+        <div class="article-item" tabindex="0" onclick="carregarManual('financeiro/index', [{titulo:'Financeiro', caminho:'financeiro/index'}])" onkeydown="if(event.key==='Enter')this.click()">
           <span><i class="fa-solid fa-question"></i> Como lançar um título?</span>
           <span class="arrow"><i class="fa-solid fa-arrow-right-long"></i></span>
         </div>
 
-        <!-- Link 5: Conciliação -->
-        <div class="article-item" onclick="carregarManual('financeiro/index')">
+        <div class="article-item" tabindex="0" onclick="carregarManual('financeiro/index', [{titulo:'Financeiro', caminho:'financeiro/index'}])" onkeydown="if(event.key==='Enter')this.click()">
           <span><i class="fa-solid fa-question"></i> Como fazer conciliação bancária?</span>
           <span class="arrow"><i class="fa-solid fa-arrow-right-long"></i></span>
         </div>
-          
-        <!-- NOVO: Card de Suporte via WhatsApp -->
-        <div class="support-card"> 
+
+        <div class="support-card">
           <h4><i class="fa-solid fa-person-circle-question"></i> Não achou o que precisava?</h4>
           <p>Fale diretamente com um de nossos especialistas.</p>
           <a href="https://wa.me/5543988303076?text=Olá,%20preciso%20de%20ajuda%20com%20o%20sistema%20Repasys." target="_blank" class="whatsapp-btn">
-          <i class="fa-brands fa-whatsapp"></i> Contacte um atendente
-        </a>
+            <i class="fa-brands fa-whatsapp"></i> Contactar um atendente
+          </a>
         </div>
       </div>
     </aside>
@@ -145,17 +172,7 @@
   <script>
     /* =========================================
        BOTÃO "VOLTAR AO SISTEMA"
-       =========================================
-       Esta central de ajuda é compartilhada por todos os clientes, mas cada
-       um acessa sua própria instância em sistema.{clientekey}.repasys.com.br.
-       Para o botão levar de volta à instância correta, descobrimos a origem
-       na seguinte ordem de prioridade:
-       1) sessionStorage — já detectada antes nesta mesma aba (SPA não recarrega).
-       2) Parâmetro ?origem= na URL, caso o sistema decida enviá-lo explicitamente.
-       3) document.referrer — a página do sistema que teve o link clicado.
-       Se nenhuma delas resultar num domínio *.repasys.com.br válido, mantém o
-       link padrão definido no href do botão.
-    */
+       ========================================= */
     function origemEhValida(hostname) {
       return /(^|\.)repasys\.com\.br$/i.test(hostname);
     }
@@ -190,14 +207,70 @@
     }
     definirLinkVoltarSistema();
 
+    /* =========================================
+       TRILHA DE NAVEGAÇÃO (BREADCRUMB)
+       ========================================= */
+    function construirBreadcrumb(trilha) {
+      const nav = document.createElement('nav');
+      nav.className = 'breadcrumb';
+      nav.setAttribute('aria-label', 'Trilha de navegação');
+
+      const itens = [{ titulo: 'Início', home: true }, ...trilha];
+
+      itens.forEach((item, idx) => {
+        if (idx > 0) {
+          const sep = document.createElement('span');
+          sep.className = 'breadcrumb-sep';
+          sep.setAttribute('aria-hidden', 'true');
+          nav.appendChild(sep);
+        }
+
+        const ehUltimo = idx === itens.length - 1;
+        const podeNavegar = item.home || item.caminho;
+
+        if (!ehUltimo && podeNavegar) {
+          const a = document.createElement('a');
+          a.href = '#';
+          a.className = 'breadcrumb-link';
+          a.textContent = item.titulo;
+          a.addEventListener('click', (evento) => {
+            evento.preventDefault();
+            if (item.home) {
+              voltarParaHome();
+            } else {
+              carregarManual(item.caminho, trilha.slice(0, idx));
+            }
+          });
+          nav.appendChild(a);
+        } else {
+          const span = document.createElement('span');
+          span.className = ehUltimo ? 'breadcrumb-current' : 'breadcrumb-link';
+          span.textContent = item.titulo;
+          if (ehUltimo) span.setAttribute('aria-current', 'page');
+          nav.appendChild(span);
+        }
+      });
+
+      return nav;
+    }
+
     // Função para renderizar os Manuais em MD
-    function carregarManual(nomeArquivo) {
+    function carregarManual(nomeArquivo, trilha) {
+      trilha = trilha || [{ titulo: 'Manual' }];
       const caminhoDoArquivo = `./manuais/${nomeArquivo}.md`;
 
-      document.getElementById('conteudo-markdown').innerHTML = '<p>Carregando documentação...</p>';
-      
+      const container = document.getElementById('conteudo-markdown');
+      container.innerHTML = '';
+      container.appendChild(construirBreadcrumb(trilha));
+
+      const corpo = document.createElement('div');
+      corpo.className = 'manual-body';
+      corpo.innerHTML = '<p class="carregando">Carregando documentação…</p>';
+      container.appendChild(corpo);
+
       document.getElementById('dashboard-home').style.display = 'none';
-      document.getElementById('conteudo-markdown').style.display = 'block';
+      container.style.display = 'block';
+      fecharMenuMobile();
 
       fetch(caminhoDoArquivo)
         .then(resposta => {
@@ -208,19 +281,24 @@
             let conteudoPuro = textoMarkdown;
             if (textoMarkdown.startsWith('---')) {
                 const partes = textoMarkdown.split('---');
-                conteudoPuro = partes.slice(2).join('---'); 
+                conteudoPuro = partes.slice(2).join('---');
             }
-            document.getElementById('conteudo-markdown').innerHTML = marked.parse(conteudoPuro);
+            corpo.innerHTML = marked.parse(conteudoPuro);
             window.scrollTo({ top: 0, behavior: 'smooth' });
         })
         .catch(erro => {
-            document.getElementById('conteudo-markdown').innerHTML = '<h3>Erro 404</h3><p>Não foi possível carregar este manual. Verifique se o arquivo existe na pasta correspondente.</p>';
+            corpo.innerHTML = `
+              <h3 class="state-heading">Não encontramos essa página</h3>
+              <p class="state-sub">O manual pode ter sido movido ou renomeado. Volte para o início e tente localizá-lo pelo menu ou pela busca.</p>
+            `;
         });
     }
 
     // Função do Menu Lateral Expansível
     function toggleSubMenu(elementoCabecalho) {
+      const abrindo = !elementoCabecalho.classList.contains('active');
       elementoCabecalho.classList.toggle('active');
+      elementoCabecalho.setAttribute('aria-expanded', String(abrindo));
       const subMenu = elementoCabecalho.nextElementSibling;
       subMenu.classList.toggle('open');
     }
@@ -229,10 +307,42 @@
     function voltarParaHome() {
       document.getElementById('conteudo-markdown').style.display = 'none';
       document.getElementById('dashboard-home').style.display = 'block';
-      
-      // Limpa a barra de pesquisa para uma nova busca
-      document.getElementById('campo-busca').value = ''; 
+      document.getElementById('campo-busca').value = '';
+      fecharMenuMobile();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
+
+    /* =========================================
+       MENU MOBILE (GAVETA)
+       ========================================= */
+    function abrirMenuMobile() {
+      document.getElementById('menu-lateral').classList.add('aberto');
+      document.getElementById('sidebar-overlay').classList.add('aberto');
+      document.getElementById('botao-menu-mobile').setAttribute('aria-expanded', 'true');
+    }
+
+    function fecharMenuMobile() {
+      const menu = document.getElementById('menu-lateral');
+      if (!menu.classList.contains('aberto')) return;
+      menu.classList.remove('aberto');
+      document.getElementById('sidebar-overlay').classList.remove('aberto');
+      document.getElementById('botao-menu-mobile').setAttribute('aria-expanded', 'false');
+    }
+
+    document.getElementById('botao-menu-mobile').addEventListener('click', () => {
+      const menu = document.getElementById('menu-lateral');
+      menu.classList.contains('aberto') ? fecharMenuMobile() : abrirMenuMobile();
+    });
+    document.getElementById('sidebar-overlay').addEventListener('click', fecharMenuMobile);
+
+    // Atalho "/" para focar a busca rapidamente
+    document.addEventListener('keydown', (evento) => {
+      if (evento.key === '/' && !['INPUT', 'TEXTAREA'].includes(document.activeElement.tagName)) {
+        evento.preventDefault();
+        document.getElementById('campo-busca').focus();
+      }
+      if (evento.key === 'Escape') fecharMenuMobile();
+    });
 
     /* =========================================
        MENU LATERAL DINÂMICO
@@ -243,27 +353,37 @@
        manual. Pra um manual novo aparecer no menu, basta esse front-matter
        — não é preciso editar este arquivo.
     */
-    function criarLinkDeManual(item) {
+    function criarLinkDeManual(item, trilhaAncestral) {
       const li = document.createElement('li');
       const a = document.createElement('a');
       a.className = 'nav-link';
       a.href = '#';
       a.textContent = item.titulo;
+      const trilhaCompleta = [...trilhaAncestral, { titulo: item.titulo, caminho: item.caminho }];
       a.addEventListener('click', (evento) => {
         evento.preventDefault();
-        carregarManual(item.caminho);
+        carregarManual(item.caminho, trilhaCompleta);
       });
       li.appendChild(a);
       return li;
     }
 
-    function criarSubmenu(item, comIcone) {
+    function criarSubmenu(item, comIcone, trilhaAncestral) {
       const li = document.createElement('li');
       li.className = 'nav-module';
 
       const header = document.createElement('div');
       header.className = 'nav-module-header';
+      header.setAttribute('role', 'button');
+      header.setAttribute('tabindex', '0');
+      header.setAttribute('aria-expanded', 'false');
       header.addEventListener('click', () => toggleSubMenu(header));
+      header.addEventListener('keydown', (evento) => {
+        if (evento.key === 'Enter' || evento.key === ' ') {
+          evento.preventDefault();
+          toggleSubMenu(header);
+        }
+      });
 
       const span = document.createElement('span');
       if (comIcone && item.icone) {
@@ -280,26 +400,47 @@
       header.appendChild(toggleIcon);
       li.appendChild(header);
 
+      const caminhoModulo = comIcone && item.id ? `${item.id}/index` : null;
+      const trilhaAtual = [...trilhaAncestral, { titulo: item.titulo, caminho: caminhoModulo }];
+
       const subLista = document.createElement('ul');
       subLista.className = 'sub-nav-list';
       item.itens.forEach((filho) => {
-        subLista.appendChild(criarItemDeMenu(filho, false));
+        subLista.appendChild(criarItemDeMenu(filho, false, trilhaAtual));
       });
       li.appendChild(subLista);
 
       return li;
     }
 
-    function criarItemDeMenu(item, comIcone) {
-      if (item.tipo === 'submenu') return criarSubmenu(item, comIcone);
-      return criarLinkDeManual(item);
+    function criarItemDeMenu(item, comIcone, trilhaAncestral) {
+      if (item.tipo === 'submenu') return criarSubmenu(item, comIcone, trilhaAncestral);
+      return criarLinkDeManual(item, trilhaAncestral);
+    }
+
+    function contarItens(itens) {
+      let total = 0;
+      (itens || []).forEach((item) => {
+        total += item.tipo === 'submenu' ? contarItens(item.itens) : 1;
+      });
+      return total;
+    }
+
+    function preencherContadores(manifest) {
+      (manifest.modulos || []).forEach((modulo) => {
+        const alvo = document.querySelector(`[data-count-for="${modulo.id}"]`);
+        if (!alvo) return;
+        const total = contarItens(modulo.itens);
+        alvo.textContent = total ? `${total} artigo${total > 1 ? 's' : ''}` : '';
+      });
     }
 
     function renderizarMenu(manifest) {
       const lista = document.getElementById('lista-menu');
       (manifest.modulos || []).forEach((modulo) => {
-        lista.appendChild(criarSubmenu({ ...modulo, itens: modulo.itens }, true));
+        lista.appendChild(criarSubmenu({ ...modulo, itens: modulo.itens }, true, []));
       });
+      preencherContadores(manifest);
     }
 
     function carregarMenu() {
@@ -315,13 +456,7 @@
 
     /* =========================================
        SISTEMA DE BUSCA INTERNA
-       ========================================= 
-       O índice (assets/search-index.json) é gerado automaticamente a
-       partir do front-matter de todos os manuais — rode
-       "node scripts/generate-manifest.js" sempre que adicionar,
-       remover ou renomear um manual. Assim a busca nunca fica
-       desatualizada em relação ao conteúdo real do site.
-    */
+       ========================================= */
     let indiceDeBusca = [];
     let indiceCarregando = null;
 
@@ -340,13 +475,12 @@
       }
       return indiceCarregando;
     }
-    // já dispara o carregamento assim que a página abre, sem esperar o usuário digitar
     carregarIndiceDeBusca();
 
     function normalizarTexto(texto) {
       return (texto || '')
         .normalize('NFD')
-        .replace(/[\u0300-\u036f]/g, '') // remove acentos
+        .replace(/[\u0300-\u036f]/g, '')
         .toLowerCase()
         .trim();
     }
@@ -390,40 +524,50 @@
       mostrarResultadosDaBusca(resultados, termoDigitado);
     }
 
+    function escaparHtml(texto) {
+      const div = document.createElement('div');
+      div.textContent = texto || '';
+      return div.innerHTML;
+    }
+
     function mostrarResultadosDaBusca(resultados, termoBusca) {
       document.getElementById('dashboard-home').style.display = 'none';
       const container = document.getElementById('conteudo-markdown');
       container.style.display = 'block';
       window.scrollTo({ top: 0, behavior: 'smooth' });
+      fecharMenuMobile();
+
+      container.innerHTML = '';
+      container.appendChild(construirBreadcrumb([{ titulo: `Busca: "${termoBusca}"` }]));
+
+      const corpo = document.createElement('div');
+      corpo.className = 'manual-body';
 
       if (resultados.length === 0) {
-         container.innerHTML = `
-            <h2>Nenhum resultado encontrado para "${termoBusca}" 😕</h2>
-            <p style="color: #718096; margin-top: 10px;">Tente buscar por termos mais genéricos, como "lead", "checklist" ou "financeiro".</p>
-            <button onclick="voltarParaHome()" style="margin-top: 20px; padding: 10px 20px; cursor: pointer; border: 1px solid #cbd5e0; background: #fff; border-radius: 6px;">Voltar ao Início</button>
-         `;
-         return;
+        corpo.innerHTML = `
+          <h2 class="state-heading">Nenhum resultado para "${escaparHtml(termoBusca)}"</h2>
+          <p class="state-sub">Tente termos mais genéricos, como "lead", "checklist" ou "financeiro".</p>
+          <button class="btn-voltar" onclick="voltarParaHome()">Voltar ao início</button>
+        `;
+        container.appendChild(corpo);
+        return;
       }
 
-      let html = `<h2>🔎 Resultados da busca para "${termoBusca}":</h2>`;
-      html += `<ul style="list-style: none; padding: 0; margin-top: 20px; display: flex; flex-direction: column; gap: 15px;">`;
-      
-      resultados.forEach(res => {
-         html += `
-            <li style="padding: 20px; border: 1px solid #e2e8f0; border-radius: 12px; cursor: pointer; background: #f8f9fa; transition: 0.2s;"
-                onclick="carregarManual('${res.caminho}')"
-                onmouseover="this.style.borderColor='#3182ce'"
-                onmouseout="this.style.borderColor='#e2e8f0'">
-               <strong style="color: #2b6cb0; font-size: 1.2em; display: block; margin-bottom: 5px;">📄 ${res.titulo}</strong>
-               <span style="color: #718096; font-size: 0.9em;">${res.resumo ? res.resumo.slice(0, 140) + '…' : 'Clique para abrir este manual.'}</span>
-            </li>
-         `;
+      let html = `<h2 class="state-heading">${resultados.length} resultado${resultados.length > 1 ? 's' : ''} para "${escaparHtml(termoBusca)}"</h2>`;
+      html += `<ul class="result-list">`;
+      resultados.forEach((res) => {
+        html += `
+          <li class="result-item" tabindex="0" onclick="carregarManual('${res.caminho}', [{titulo:'${escaparHtml(res.titulo)}'}])" onkeydown="if(event.key==='Enter')this.click()">
+            <strong>${escaparHtml(res.titulo)}</strong>
+            <span>${res.resumo ? escaparHtml(res.resumo.slice(0, 140)) + '…' : 'Clique para abrir este manual.'}</span>
+          </li>
+        `;
       });
-      
       html += `</ul>`;
-      html += `<button onclick="voltarParaHome()" style="margin-top: 30px; padding: 10px 20px; cursor: pointer; border: 1px solid #cbd5e0; background: #fff; border-radius: 6px;">Voltar ao Início</button>`;
-      
-      container.innerHTML = html;
+      html += `<button class="btn-voltar" onclick="voltarParaHome()">Voltar ao início</button>`;
+
+      corpo.innerHTML = html;
+      container.appendChild(corpo);
     }
   </script>
 </body>

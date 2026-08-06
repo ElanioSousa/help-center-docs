@@ -55,9 +55,8 @@ Com certeza! Aqui está um manual passo a passo para o usuário utilizar a funci
 
 **Manual do Usuário: Compra de Créditos**
 
-[https://app.notion.com](https://app.notion.com)
 
-**Objetivo:** Este manual tem como objetivo guiar o usuário no processo de compra de créditos dentro do sistema.
+> 🎯 **Objetivo:** Este manual tem como objetivo guiar o usuário no processo de compra de créditos dentro do sistema.
 
 **Passo 1: Acessar a Tela de Compra de Créditos**
 
